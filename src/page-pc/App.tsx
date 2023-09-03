@@ -178,7 +178,7 @@ export default function App() {
     const title = "index"; //页面标题
     const json = designerRef.current?.toJSON();
     let html = htmlTpt.replace(`--title--`, title); //替换
-    html = html.replace(`'-projectJson-'`, JSON.stringify(json)); //替换
+    html = html.replace(`"-projectJson-"`, JSON.stringify(json)); //替换
 
     //-----------------------------------------------
 
