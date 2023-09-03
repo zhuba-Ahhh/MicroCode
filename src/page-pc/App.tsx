@@ -1,7 +1,7 @@
-import React, { useCallback, useRef } from "react";
+import React, { useRef, useCallback } from "react";
 import { message } from "antd";
 import toolsPlugin from "@mybricks/plugin-tools";
-import css from "./App.less";
+import css from "./assets/App.less";
 
 //加载连接器插件
 import servicePlugin, {
@@ -12,22 +12,9 @@ import htmlTpt from "./pub-tpt.html";
 //在window上获取设计器实例
 const Designer = (window as any).mybricks.SPADesigner;
 
-//import testLib from './comlib'
-
-//在../../targets/page-pc.html中通过script标签加载设计器
-
-/**
- *   <!-- Mybricks-SPA设计引擎 -->
- *   <script type="text/javascript" src="https://f2.beckwai.com/kos/nlav12333/mybricks/designer-spa/1.2.77/index.min.js"></script>
- */
-
-/**
- * 配置设计器
- * 文档地址：https://docs.mybricks.world/
- */
 const config = {
-  plugins: [toolsPlugin(),servicePlugin()], //配置插件
-  comLibLoader(desc) {
+  plugins: [toolsPlugin(), servicePlugin()], //配置插件
+  comLibLoader() {
     //配置组件加载器
     return new Promise<string[]>((resolve, reject) => {
       resolve([
@@ -42,12 +29,12 @@ const config = {
   pageContentLoader() {
     //配置加载页面内容
     return new Promise<string>((resolve, reject) => {
-      let pageContent = window.localStorage.getItem("--mybricks--");
+      let pageContent = window.localStorage.getItem(localDataKey);
       if (pageContent) {
         pageContent = JSON.parse(pageContent);
         resolve(pageContent as string);
       } else {
-        resolve('');
+        resolve("");
         // return import("./demo-data.json").then((data) => {
         //   pageContent = JSON.parse(JSON.stringify(data));
         //   resolve(pageContent as string);
@@ -71,6 +58,15 @@ const config = {
             asRoot: true,
           },
         },
+        {
+          type: "popup",
+          title: "抽屉",
+          template: {
+            namespace: "mybricks.basic-comlib.drawer",
+            deletable: false,
+            asRoot: true,
+          },
+        },
       ],
     },
   },
@@ -89,7 +85,7 @@ const config = {
     //配置组件运行时的环境扩展【非必选】
     env: {
       //renderCom: render,
-      i18n(title) {
+      i18n(title: any) {
         //多语言
         return title;
       },
@@ -133,13 +129,19 @@ const config = {
   },
 };
 
+const localDataKey = "--mybricks--";
+
 export default function App() {
-  const designerRef = useRef<{ switchActivity; dump; toJSON }>();
+  const designerRef = useRef<{
+    switchActivity: any;
+    dump: () => any;
+    toJSON: () => any;
+  }>();
 
   /**
    * 处理引擎消息
    */
-  const onMessage = useCallback((type, msg) => {
+  const onMessage = useCallback((type: string | number, msg: any) => {
     message.destroy();
     message[type](msg);
   }, []);
@@ -150,8 +152,13 @@ export default function App() {
   const save = useCallback(() => {
     const json = designerRef.current?.dump();
 
-    window.localStorage.setItem("--mybricks--", JSON.stringify(json));
+    window.localStorage.setItem(localDataKey, JSON.stringify(json));
     message.info(`保存完成`);
+  }, []);
+
+  const clear = useCallback(() => {
+    window.localStorage.removeItem(localDataKey);
+    window.location.reload();
   }, []);
 
   /**
@@ -198,10 +205,13 @@ export default function App() {
     <>
       <div className={css.show}>
         <div className={css.toolbar}>
-          <div className={css.tt}>&lt;MicroCode&gt; <span>简化你的开发</span></div>
+          <div className={css.tt}>
+            &lt;MicroCode&gt; <span>简化你的开发</span>
+          </div>
           <button className={css.primary} onClick={save}>
             保存
           </button>
+          <button onClick={clear}>清空</button>
           <button onClick={preview}>预览</button>
           <button onClick={publish}>发布</button>
         </div>
