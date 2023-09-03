@@ -31,13 +31,13 @@ function Page() {
         //渲染Mybricks toJSON的结果
         env: {
           //配置组件运行的各类环境信息
-          i18n(text) {
+          i18n(text: any) {
             //多语言
             return text;
           },
           callConnector: mock,
           getQuery() {
-            return "aaa";
+            return {};
           },
           events: [
             //配置事件
