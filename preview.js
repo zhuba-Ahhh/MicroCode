@@ -168,7 +168,7 @@ function Page() {
             },
             callConnector: _mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_1__.mock,
             getQuery() {
-                return "aaa";
+                return {};
             },
             events: [
                 //配置事件
