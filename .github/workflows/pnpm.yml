@@ -17,10 +17,10 @@ jobs:
           version: 8.6.11
       - name: Install modules
         run: pnpm install
-      # - name: Build
-      #   run: pnpm build
-      # - name: Deploy
-      #   uses: JamesIves/github-pages-deploy-action@v4.2.5
-      #   with:
-      #     branch: gh-pages
-      #     folder: dist
+      - name: Build
+        run: pnpm build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: dist

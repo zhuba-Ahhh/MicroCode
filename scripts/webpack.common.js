@@ -3,8 +3,9 @@ const path = require("path");
 const ignoreWarningPlugin = require("./_ignoreWarningPlugin");
 
 const WebpackBar = require("webpackbar");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const outputPath = path.resolve(__dirname, `../targets`);
+const outputPath = path.resolve(__dirname, `../dist`);
 
 module.exports = {
   mode: "development",
@@ -125,5 +126,10 @@ module.exports = {
   plugins: [
     new WebpackBar(),
     new ignoreWarningPlugin(), // All warnings will be ignored
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public', to: '' },
+      ],
+    }),
   ],
 };
