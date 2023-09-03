@@ -198,10 +198,7 @@ export default function App() {
     <>
       <div className={css.show}>
         <div className={css.toolbar}>
-          <div className={css.tt}>&lt;MicroCode&gt;</div>
-          <div className={css.btns}>
-            {/*<button onClick={switchSlider}>激活连接器插件</button>*/}
-          </div>
+          <div className={css.tt}>&lt;MicroCode&gt; <span>简化你的开发</span></div>
           <button className={css.primary} onClick={save}>
             保存
           </button>
