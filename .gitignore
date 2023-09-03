@@ -1,0 +1,16 @@
+.git/
+.idea/
+.DS_Store
+node_modules
+_scripts/
+_examples/
+_src/
+_assets/
+_targets/
+src/**/*.js
+tags/*
+.history
+.vscode/
+package-lock.json
+pnpm-lock.yaml
+index.min.js
