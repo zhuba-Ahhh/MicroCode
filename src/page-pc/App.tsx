@@ -31,29 +31,27 @@ const config = {
     //配置组件加载器
     return new Promise<string[]>((resolve, reject) => {
       resolve([
-        //基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
-        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/edit.js`,
         //PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
         `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.72/2023-08-28_16-50-20/edit.js`,
+        //基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
+        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/edit.js`,
       ]);
       //resolve([testLib])//也可以加载本地组件库
     });
   },
   pageContentLoader() {
     //配置加载页面内容
-    const pageContent = window.localStorage.getItem("--mybricks--"); //本例中，直接从本地存储中加载
     return new Promise<string>((resolve, reject) => {
       let pageContent = window.localStorage.getItem("--mybricks--");
       if (pageContent) {
         pageContent = JSON.parse(pageContent);
-
         resolve(pageContent as string);
       } else {
-        // resolve(null);
-        return import("./demo-data.json").then((data) => {
-          pageContent = JSON.parse(JSON.stringify(data));
-          resolve(pageContent as string);
-        });
+        resolve('');
+        // return import("./demo-data.json").then((data) => {
+        //   pageContent = JSON.parse(JSON.stringify(data));
+        //   resolve(pageContent as string);
+        // });
       }
     });
   },
@@ -177,7 +175,7 @@ export default function App() {
    * 发布（导出）
    */
   const publish = useCallback(() => {
-    const title = "我的页面"; //页面标题
+    const title = "index"; //页面标题
     const json = designerRef.current?.toJSON();
     let html = htmlTpt.replace(`--title--`, title); //替换
     html = html.replace(`'-projectJson-'`, JSON.stringify(json)); //替换
