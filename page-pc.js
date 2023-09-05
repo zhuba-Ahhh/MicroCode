@@ -206,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<!DOCTYPE html>\n<html lang=\"zh-CN\" class=\"no-js\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"user-scalable=no,viewport-fit=cover\" />\n    <meta name=\"referrer\" content=\"no-referrer\" />\n    <meta http-equiv=\"Access-Control-Allow-Origin\" content=\"*\" />\n\n    <title>--title--</title>\n\n    <style></style>\n\n    <!-- Antd相关 -->\n    <link\n      rel=\"stylesheet\"\n      type=\"text/css\"\n      href=\"https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css\"\n    />\n    <!-- antd 样式部分 -->\n    <link\n      rel=\"stylesheet\"\n      type=\"text/css\"\n      href=\"https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css\"\n    />\n\n    <!-- React部分 版本号 > 17.0 -->\n    <script src=\"https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/reat-18.0.0/react.production.min.js\"></script>\n    <script src=\"https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/react-dom-18.0.0/react-dom.production.min.js\"></script>\n\n    <!-- antd js部分 -->\n\n    <script src=\"https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.min.js\"></script>\n    <script src=\"https://ali-ec.static.yximgs.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/icons-4.7.0/dist/index.umd.min.js\"></script>\n\n    <script src=\"https://cdn.jsdelivr.net/npm/@mybricks/render-web@1.1.83/index.min.js\"></script>\n\n    <!-- 组件库运行时 基础组件库-->\n    <script src=\"https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/rt.js\"></script>\n\n    <!-- 组件库运行时 PC通用组件库-->\n    <script src=\"https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.72/2023-08-28_16-50-20/rt.js\"></script>\n  </head>\n\n  <body>\n    <div id=\"app\"></div>\n\n    <script>\n      const React = window.React;\n      const ReactDom = window.ReactDOM;\n      /**\n       * Render-web，Mybricks提供的web渲染器\n       */\n      const { render: renderUI } = window._mybricks_render_web;\n\n      /**\n       * 设计器导出的项目JSON\n       */\n      const projectJson = \"-projectJson-\"; //replace it\n\n      ReactDom.render(\n        React.createElement(Page),\n        document.querySelector(\"#app\")\n      );\n\n      function Page(props) {\n        return renderUI(projectJson, {\n          env: {\n            //对组件的运行环境扩展\n            callConnector() {\n              ////TODO\n            },\n          },\n        });\n      }\n    </script>\n  </body>\n</html>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<!DOCTYPE html>\n<html lang=\"zh-CN\" class=\"no-js\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"user-scalable=no,viewport-fit=cover\" />\n    <meta name=\"referrer\" content=\"no-referrer\" />\n    <meta http-equiv=\"Access-Control-Allow-Origin\" content=\"*\" />\n\n    <title>--title--</title>\n\n    <style></style>\n\n    <!-- Antd相关 -->\n    <link\n      rel=\"stylesheet\"\n      type=\"text/css\"\n      href=\"https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css\"\n    />\n    <!-- antd 样式部分 -->\n    <link\n      rel=\"stylesheet\"\n      type=\"text/css\"\n      href=\"https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css\"\n    />\n\n    <!-- React部分 版本号 > 17.0 -->\n    <script src=\"https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/reat-18.0.0/react.production.min.js\"></script>\n    <script src=\"https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/react-dom-18.0.0/react-dom.production.min.js\"></script>\n\n    <!-- antd js部分 -->\n\n    <script src=\"https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.min.js\"></script>\n    <script src=\"https://ali-ec.static.yximgs.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/icons-4.7.0/dist/index.umd.min.js\"></script>\n\n    <script src=\"https://cdn.jsdelivr.net/npm/@mybricks/render-web@1.1.83/index.min.js\"></script>\n\n    <!-- 组件库运行时 基础组件库-->\n    <script src=\"https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/rt.js\"></script>\n\n    <!-- 组件库运行时 PC通用组件库-->\n    <script src=\"https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.82/2023-09-04_17-46-04/rt.js\"></script>\n\n    <!-- 组件库运行时 PC图表组件库-->\n    <script src=\"https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/rt.js\"></script>\n\n    <!-- 组件库运行时 PC拓展组件库-->\n    <script src=\"https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7765_1.0.9/2023-08-08_17-30-11/rt.js\"></script>\n  </head>\n\n  <body>\n    <div id=\"app\"></div>\n\n    <script>\n      const React = window.React;\n      const ReactDom = window.ReactDOM;\n      /**\n       * Render-web，Mybricks提供的web渲染器\n       */\n      const { render: renderUI } = window._mybricks_render_web;\n\n      /**\n       * 设计器导出的项目JSON\n       */\n      const projectJson = \"-projectJson-\"; //replace it\n\n      ReactDom.render(\n        React.createElement(Page),\n        document.querySelector(\"#app\")\n      );\n\n      function Page(props) {\n        return renderUI(projectJson, {\n          env: {\n            //对组件的运行环境扩展\n            callConnector() {\n              ////TODO\n            },\n          },\n        });\n      }\n    </script>\n  </body>\n</html>\n");
 
 /***/ }),
 
@@ -573,6 +573,176 @@ module.exports = domAPI;
 
 /***/ }),
 
+/***/ "./src/page-pc/App-config.tsx":
+/*!************************************!*\
+  !*** ./src/page-pc/App-config.tsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mybricks/plugin-tools */ "./node_modules/.pnpm/@mybricks+plugin-tools@1.0.17/node_modules/@mybricks/plugin-tools/lib/index.js");
+/* harmony import */ var _mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mybricks/plugin-connector-http */ "./node_modules/.pnpm/@mybricks+plugin-connector-http@1.1.47/node_modules/@mybricks/plugin-connector-http/runtime/plugin.js");
+/* harmony import */ var _mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_1__);
+
+//加载连接器插件
+
+const localDataKey = "--mybricks--";
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((setUseData, useData, save) => {
+    return {
+        shortcuts: {
+            "ctrl+s": [save],
+        },
+        plugins: [_mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_1___default()(), _mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_0___default()()],
+        comLibLoader() {
+            //配置组件加载器
+            return new Promise((resolve, reject) => {
+                resolve([
+                    // PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
+                    `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.82/2023-09-04_17-46-04/edit.js`,
+                    // 基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
+                    `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/edit.js`,
+                    // 图表组件库
+                    `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/edit.js`,
+                    // 拓展组件库
+                    `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7765_1.0.9/2023-08-08_17-30-11/edit.js`,
+                ]);
+                //resolve([testLib])//也可以加载本地组件库
+            });
+        },
+        pageContentLoader() {
+            //配置加载页面内容
+            return new Promise((resolve, reject) => {
+                let pageContent = window.localStorage.getItem(localDataKey);
+                if (pageContent) {
+                    pageContent = JSON.parse(pageContent);
+                    resolve(pageContent);
+                }
+                else {
+                    // resolve("");
+                    return __webpack_require__.e(/*! import() */ "src_page-pc_assets_data_json").then(__webpack_require__.t.bind(__webpack_require__, /*! ./assets/data.json */ "./src/page-pc/assets/data.json", 19)).then((data) => {
+                        pageContent = JSON.parse(JSON.stringify(data));
+                        resolve(pageContent);
+                    });
+                }
+            });
+        },
+        geoView: {
+            //配置布局视图
+            type: "pc",
+            nav: { float: false },
+            scenes: {
+                //多场景【非必选】
+                adder: [
+                    {
+                        type: "popup",
+                        title: "对话框",
+                        template: {
+                            namespace: "mybricks.basic-comlib.popup",
+                            deletable: false,
+                            asRoot: true,
+                        },
+                    },
+                    {
+                        type: "popup",
+                        title: "抽屉",
+                        template: {
+                            namespace: "mybricks.basic-comlib.drawer",
+                            deletable: false,
+                            asRoot: true,
+                        },
+                    },
+                ],
+            },
+        },
+        toplView: {
+            //如果不需要这个面板，可以注释
+            title: "交互",
+            cards: {
+                //逻辑卡片
+                main: {
+                    title: "页面",
+                },
+            },
+            fx: {}, //支持fx
+        },
+        editView: {
+            items({}, cate0) {
+                cate0.title = `项目`;
+                // cate0.items = [
+                //   {
+                //     title: "名称",
+                //     type: "Text",
+                //     value: {
+                //       get: () => {
+                //         return useData.title;
+                //       },
+                //       set: (_, v: string) => {
+                //         setUseData({
+                // 	...useData,
+                // 	title: v
+                // });
+                //       },
+                //     },
+                //   },
+                // ];
+            },
+        },
+        com: {
+            //配置组件运行时的环境扩展【非必选】
+            env: {
+                //renderCom: render,
+                i18n(title) {
+                    //多语言
+                    return title;
+                },
+                callConnector(connector, params) {
+                    //调用连接器
+                    if (connector.type === "http") {
+                        //服务接口类型
+                        return (0,_mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_1__.call)(connector, params, {
+                            // 发送请求前的钩子函数
+                            before(options) {
+                                return Object.assign({}, options);
+                            },
+                        });
+                    }
+                    else {
+                        return Promise.reject("错误的连接器类型.");
+                    }
+                },
+            },
+            events: [
+                //配置事件【非必选】
+                {
+                    type: "jump",
+                    title: "跳转到",
+                    exe({ options }) {
+                        const page = options.page;
+                        if (page) {
+                            window.location.href = page;
+                        }
+                    },
+                    options: [
+                        {
+                            id: "page",
+                            title: "页面",
+                            editor: "textarea",
+                        },
+                    ],
+                },
+            ],
+        },
+    };
+});
+
+
+/***/ }),
+
 /***/ "./src/page-pc/App.tsx":
 /*!*****************************!*\
   !*** ./src/page-pc/App.tsx ***!
@@ -588,140 +758,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd */ "antd");
 /* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mybricks/plugin-tools */ "./node_modules/.pnpm/@mybricks+plugin-tools@1.0.17/node_modules/@mybricks/plugin-tools/lib/index.js");
-/* harmony import */ var _mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_App_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/App.less */ "./src/page-pc/assets/App.less");
-/* harmony import */ var _mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mybricks/plugin-connector-http */ "./node_modules/.pnpm/@mybricks+plugin-connector-http@1.1.47/node_modules/@mybricks/plugin-connector-http/runtime/plugin.js");
-/* harmony import */ var _mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _pub_tpt_html__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pub-tpt.html */ "./src/page-pc/pub-tpt.html");
+/* harmony import */ var _assets_App_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/App.less */ "./src/page-pc/assets/App.less");
+/* harmony import */ var _App_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App-config */ "./src/page-pc/App-config.tsx");
+/* harmony import */ var _pub_tpt_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pub-tpt.html */ "./src/page-pc/pub-tpt.html");
 
 
 
-
-//加载连接器插件
 
 
 //在window上获取设计器实例
 const Designer = window.mybricks.SPADesigner;
-const config = {
-    plugins: [_mybricks_plugin_tools__WEBPACK_IMPORTED_MODULE_2___default()(), _mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_4___default()()],
-    comLibLoader() {
-        //配置组件加载器
-        return new Promise((resolve, reject) => {
-            resolve([
-                //PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
-                `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.72/2023-08-28_16-50-20/edit.js`,
-                //基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
-                `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/edit.js`,
-            ]);
-            //resolve([testLib])//也可以加载本地组件库
-        });
-    },
-    pageContentLoader() {
-        //配置加载页面内容
-        return new Promise((resolve, reject) => {
-            let pageContent = window.localStorage.getItem(localDataKey);
-            if (pageContent) {
-                pageContent = JSON.parse(pageContent);
-                resolve(pageContent);
-            }
-            else {
-                resolve("");
-                // return import("./demo-data.json").then((data) => {
-                //   pageContent = JSON.parse(JSON.stringify(data));
-                //   resolve(pageContent as string);
-                // });
-            }
-        });
-    },
-    geoView: {
-        //配置布局视图
-        type: "pc",
-        nav: { float: false },
-        scenes: {
-            //多场景【非必选】
-            adder: [
-                {
-                    type: "popup",
-                    title: "对话框",
-                    template: {
-                        namespace: "mybricks.basic-comlib.popup",
-                        deletable: false,
-                        asRoot: true,
-                    },
-                },
-                {
-                    type: "popup",
-                    title: "抽屉",
-                    template: {
-                        namespace: "mybricks.basic-comlib.drawer",
-                        deletable: false,
-                        asRoot: true,
-                    },
-                },
-            ],
-        },
-    },
-    toplView: {
-        //如果不需要这个面板，可以注释
-        title: "交互",
-        cards: {
-            //逻辑卡片
-            main: {
-                title: "页面",
-            },
-        },
-        fx: {}, //支持fx
-    },
-    com: {
-        //配置组件运行时的环境扩展【非必选】
-        env: {
-            //renderCom: render,
-            i18n(title) {
-                //多语言
-                return title;
-            },
-            callConnector(connector, params) {
-                //调用连接器
-                if (connector.type === "http") {
-                    //服务接口类型
-                    return (0,_mybricks_plugin_connector_http__WEBPACK_IMPORTED_MODULE_4__.call)(connector, params, {
-                        // 发送请求前的钩子函数
-                        before(options) {
-                            return Object.assign({}, options);
-                        },
-                    });
-                }
-                else {
-                    return Promise.reject("错误的连接器类型.");
-                }
-            },
-        },
-        events: [
-            //配置事件【非必选】
-            {
-                type: "jump",
-                title: "跳转到",
-                exe({ options }) {
-                    const page = options.page;
-                    if (page) {
-                        window.location.href = page;
-                    }
-                },
-                options: [
-                    {
-                        id: "page",
-                        title: "页面",
-                        editor: "textarea",
-                    },
-                ],
-            },
-        ],
-    },
-};
 const localDataKey = "--mybricks--";
 function App() {
     const designerRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+    const [useData, setUseData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+        title: 'index'
+    });
     /**
      * 处理引擎消息
      */
@@ -752,7 +804,8 @@ function App() {
         window.localStorage.setItem("--preview--", JSON.stringify(json));
         const win = window.open("", "preview");
         if ((win === null || win === void 0 ? void 0 : win.location.href) === "about:blank") {
-            window.open("/preview.html", "preview");
+            // window.open("./preview.html", "preview");
+            win.location.href = "./preview.html";
         }
         else {
             win === null || win === void 0 ? void 0 : win.focus();
@@ -763,9 +816,9 @@ function App() {
      */
     const publish = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(() => {
         var _a;
-        const title = "index"; //页面标题
+        const title = useData.title; //页面标题
         const json = (_a = designerRef.current) === null || _a === void 0 ? void 0 : _a.toJSON();
-        let html = _pub_tpt_html__WEBPACK_IMPORTED_MODULE_5__["default"].replace(`--title--`, title); //替换
+        let html = _pub_tpt_html__WEBPACK_IMPORTED_MODULE_4__["default"].replace(`--title--`, title); //替换
         html = html.replace(`"-projectJson-"`, JSON.stringify(json)); //替换
         //-----------------------------------------------
         const linkNode = document.createElement("a");
@@ -776,19 +829,19 @@ function App() {
         document.body.appendChild(linkNode);
         linkNode.click();
         document.body.removeChild(linkNode);
-    }, []);
+    }, [useData]);
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_3__["default"].show },
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_3__["default"].toolbar },
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_3__["default"].tt },
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_2__["default"].show },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_2__["default"].toolbar },
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_2__["default"].tt },
                     "<MicroCode> ",
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "\u7B80\u5316\u4F60\u7684\u5F00\u53D1")),
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_3__["default"].primary, onClick: save }, "\u4FDD\u5B58"),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_2__["default"].primary, onClick: save }, "\u4FDD\u5B58"),
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { onClick: clear }, "\u6E05\u7A7A"),
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { onClick: preview }, "\u9884\u89C8"),
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", { onClick: publish }, "\u53D1\u5E03")),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_3__["default"].designer },
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Designer, { config: config, ref: designerRef, onMessage: onMessage, onEdit: (...args) => {
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", { className: _assets_App_less__WEBPACK_IMPORTED_MODULE_2__["default"].designer },
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Designer, { config: (0,_App_config__WEBPACK_IMPORTED_MODULE_3__["default"])(setUseData, useData, save), ref: designerRef, onMessage: onMessage, onEdit: (...args) => {
                         //当有编辑动作发生
                         //console.log(args)
                     } })))));
@@ -856,6 +909,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react_dom__;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -869,6 +925,36 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react_dom__;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -878,6 +964,28 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react_dom__;
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() => {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) => {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) => {
+/******/ 			// return url for filenames based on template
+/******/ 			return "./" + chunkId + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -898,6 +1006,52 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react_dom__;
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() => {
+/******/ 		var inProgress = {};
+/******/ 		var dataWebpackPrefix = "micro-code:";
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				for(var i = 0; i < scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement('script');
+/******/ 		
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 				script.src = url;
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode && script.parentNode.removeChild(script);
+/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			}
+/******/ 			;
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -907,6 +1061,116 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react_dom__;
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"page-pc": 0
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
+/******/ 		
+/******/ 					// a Promise means "currently loading".
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if(true) { // all chunks have JS
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) => {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 										error.name = 'ChunkLoadError';
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 		
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkmicro_code"] = self["webpackChunkmicro_code"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
