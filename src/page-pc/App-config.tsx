@@ -115,8 +115,9 @@ export default (setUseData?: any, useData?: any, save?: any) => {
           //多语言
           return title;
         },
-        callConnector(connector, params) {
+        callConnector(connector: any, params: any) {
           //调用连接器
+          console.log('connector.type === "http"', connector.type === "http", connector, params);
           if (connector.type === "http") {
             //服务接口类型
             return callConnectorHttp(connector, params, {

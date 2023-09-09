@@ -3,7 +3,7 @@ const path = require("path");
 const ignoreWarningPlugin = require("./_ignoreWarningPlugin");
 
 const WebpackBar = require("webpackbar");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const outputPath = path.resolve(__dirname, `../dist`);
 
@@ -34,6 +34,7 @@ module.exports = {
         commonjs2: "react-dom",
         amd: "react-dom",
         root: "ReactDOM",
+        var: "ReactDOM",
       },
       antd: {
         commonjs: "antd",
@@ -118,6 +119,10 @@ module.exports = {
         test: /\.(xml|txt|html|cjs|theme)$/i,
         use: [{ loader: "raw-loader" }],
       },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"],
+      },
     ],
   },
   optimization: {
@@ -127,9 +132,7 @@ module.exports = {
     new WebpackBar(),
     new ignoreWarningPlugin(), // All warnings will be ignored
     new CopyWebpackPlugin({
-      patterns: [
-        { from: 'public', to: '' },
-      ],
+      patterns: [{ from: "public", to: "" }],
     }),
   ],
 };
