@@ -7,20 +7,39 @@
 ## 开始使用
 
 建议使用 `pnpm`
-安装`pnpm`
+
+### 安装`pnpm`
 
 ```bash
 npm i pnpm -g
 ```
 
-安装依赖
+### 安装依赖
 
 ```bash
 pnpm install
 ```
 
-本地调试
+### 本地调试
 
 ```bash
-pnpm serve
+pnpm dev
 ```
+
+[open 查看](http://localhost:8000/page-pc)
+
+### 打包
+
+```bash
+pnpm build
+```
+
+### 查看效果
+
+```bash
+pnpm i serve -g 
+
+serve dist -l 4005
+```
+
+[open 查看](http://localhost:4005/page-pc)
