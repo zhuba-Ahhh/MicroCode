@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./Toolbar.less";
-import SaveLoadingSvg from "../svg/saveLoading.svg";
+import SaveLoadingSvg from "../svg/SaveLoading.svg";
 
 interface ToolBarProps {
   save: () => void;
@@ -23,7 +23,7 @@ const ToolBar: React.FC<ToolBarProps> = (props) => {
           <span
             role="img"
             aria-label="loading"
-            className={`${css.anticon} ${css.anticonLoading} ${css.anticonSpin}`}
+            className={`${css.anticon} ${css.anticonSpin}`}
             style={{ marginRight: "4px" }}
           >
             <SaveLoadingSvg />

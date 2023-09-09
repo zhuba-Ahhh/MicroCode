@@ -18,9 +18,9 @@ export default (setUseData?: any, useData?: any, save?: any) => {
       return new Promise<string[]>((resolve, reject) => {
         resolve([
           // PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
-          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.82/2023-09-04_17-46-04/edit.js`,
+          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.88/2023-09-07_21-40-45/edit.js`,
           // 基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
-          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.55/2023-08-23_22-05-28/edit.js`,
+          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.61/2023-09-05_20-04-25/edit.js`,
           // 图表组件库
           `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/edit.js`,
           // 拓展组件库
@@ -37,7 +37,6 @@ export default (setUseData?: any, useData?: any, save?: any) => {
           pageContent = JSON.parse(pageContent);
           resolve(pageContent as string);
         } else {
-          // resolve("");
           return import("./assets/data.json").then((data) => {
             pageContent = JSON.parse(JSON.stringify(data));
             resolve(pageContent as string);
@@ -97,9 +96,9 @@ export default (setUseData?: any, useData?: any, save?: any) => {
         //       },
         //       set: (_, v: string) => {
         //         setUseData({
-				// 	...useData,
-				// 	title: v
-				// });
+        // 	...useData,
+        // 	title: v
+        // });
         //       },
         //     },
         //   },
@@ -117,7 +116,6 @@ export default (setUseData?: any, useData?: any, save?: any) => {
         },
         callConnector(connector: any, params: any) {
           //调用连接器
-          console.log('connector.type === "http"', connector.type === "http", connector, params);
           if (connector.type === "http") {
             //服务接口类型
             return callConnectorHttp(connector, params, {

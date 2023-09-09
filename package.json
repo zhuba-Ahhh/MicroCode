@@ -18,7 +18,7 @@
   "author": "Rush",
   "license": "MIT",
   "dependencies": {
-    "@mybricks/plugin-connector-http": "^1.1.47",
+    "@mybricks/plugin-connector-http": "^1.1.50",
     "@mybricks/plugin-tools": "^1.0.17",
     "antd": "^4.23.6",
     "react": "^18.2.0",
