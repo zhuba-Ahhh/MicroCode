@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./Toolbar.less";
-import SaveLoadingSvg from "../svg/SaveLoading.svg";
+import SaveLoadingSvg from "../svg/saveLoading.svg";
 
 interface ToolBarProps {
   save: () => void;
