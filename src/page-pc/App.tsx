@@ -2,8 +2,8 @@ import React, { useState, useRef, useCallback } from "react";
 import { message } from "antd";
 import ToolBar from "./components/Toolbar";
 import css from "./App.less";
-import config from "./App-config";
-import htmlTpt from "./pub-tpt.html";
+import config from "./AppConfig";
+import htmlTpt from "./assets/pub-tpt.html";
 
 //在window上获取设计器实例
 const Designer = (window as any).mybricks.SPADesigner;
@@ -47,6 +47,9 @@ export default function App() {
     }, 500)
   }, []);
 
+  /**
+   * 清空
+   */
   const clear = useCallback(() => {
     // window.localStorage.removeItem(localDataKey);
     window.localStorage.setItem(localDataKey, JSON.stringify({}));
