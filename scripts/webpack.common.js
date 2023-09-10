@@ -1,14 +1,14 @@
 const path = require("path");
 
-const ignoreWarningPlugin = require("./_ignoreWarningPlugin");
-
 const WebpackBar = require("webpackbar");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ignoreWarningPlugin = require("./_ignoreWarningPlugin");
 
-const outputPath = path.resolve(__dirname, `../dist`);
+const outputPath = path.resolve(__dirname, "../dist");
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
-  mode: "development",
+  mode: isProduction ? "production" : "development",
   output: {
     path: outputPath,
     filename: "./[name].js",
@@ -16,41 +16,15 @@ module.exports = {
     library: "[name]",
   },
   resolve: {
-    alias: {
-      //'@mybricks/render-web': path.join(__dirname, '../../render-web/src/index.tsx')
-    },
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
-  externals: [
-    {
-      react: {
-        commonjs: "react",
-        commonjs2: "react",
-        amd: "react",
-        root: "React",
-      },
-      "react-dom": {
-        commonjs: "react-dom",
-        commonjs2: "react-dom",
-        amd: "react-dom",
-        root: "ReactDOM",
-        var: "ReactDOM",
-      },
-      antd: {
-        commonjs: "antd",
-        commonjs2: "antd",
-        amd: "antd",
-        root: "antd",
-      },
-      "@ant-design/icons": "icons",
-    },
-  ],
-  devtool: "cheap-source-map", //devtool: 'cheap-source-map',
-  // resolve: {
-  //     alias: {
-  //         '@es/spa-designer': require('path').resolve(__dirname, '../'),
-  //     }
-  // },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+    antd: "antd",
+    "@ant-design/icons": "icons",
+  },
+  devtool: isProduction ? "source-map" : "eval-source-map",
   devServer: {
     static: {
       directory: outputPath,
@@ -64,8 +38,10 @@ module.exports = {
       overlay: true,
       progress: true,
     },
-    open: true,
     proxy: [],
+  },
+  optimization: {
+    concatenateModules: false, //name_name
   },
   module: {
     rules: [
@@ -91,7 +67,7 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /^[^\.]+\.less$/i,
+        test: /\.less$/,
         use: [
           {
             loader: "style-loader",
@@ -125,14 +101,11 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    concatenateModules: false, //name_name
-  },
   plugins: [
     new WebpackBar(),
-    new ignoreWarningPlugin(), // All warnings will be ignored
+    new ignoreWarningPlugin(),
     new CopyWebpackPlugin({
-      patterns: [{ from: "public", to: "" }],
+      patterns: [{ from: "public", to: outputPath }],
     }),
   ],
 };
