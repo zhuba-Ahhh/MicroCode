@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no,viewport-fit=cover" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+
+    <title>--title--</title>
+
+    <style></style>
+
+    <!-- Antd相关 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css"
+    />
+    <!-- antd 样式部分 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css"
+    />
+
+    <!-- React部分 版本号 > 17.0 -->
+    <script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/reat-18.0.0/react.production.min.js"></script>
+    <script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/react-dom-18.0.0/react-dom.production.min.js"></script>
+
+    <!-- antd js部分 -->
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.min.js"></script>
+    <script src="https://ali-ec.static.yximgs.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/icons-4.7.0/dist/index.umd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mybricks/render-web@1.1.83/index.min.js"></script>
+
+    <!-- 组件库运行时 基础组件库-->
+    <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.61/2023-09-05_20-04-25/rt.js"></script>
+
+    <!-- 组件库运行时 PC通用组件库-->
+    <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.88/2023-09-07_21-40-45/rt.js"></script>
+
+    <!-- 组件库运行时 PC图表组件库-->
+    <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/rt.js"></script>
+
+    <!-- 组件库运行时 PC拓展组件库-->
+    <script src="https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7765_1.0.9/2023-08-08_17-30-11/rt.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const React = window.React;
+      const ReactDom = window.ReactDOM;
+      /**
+       * Render-web，Mybricks提供的web渲染器
+       */
+      const { render: renderUI } = window._mybricks_render_web;
+
+      /**
+       * 设计器导出的项目JSON
+       */
+      const projectJson = "-projectJson-"; //replace it
+
+      ReactDom.render(
+        React.createElement(Page),
+        document.querySelector("#app")
+      );
+
+      function Page(props) {
+        return renderUI(projectJson, {
+          env: {
+            //对组件的运行环境扩展
+            callConnector() {
+              ////TODO
+            },
+          },
+        });
+      }
+    </script>
+    <script entry>
+      __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+
+      const render = () => {
+        // 这里可以在渲染之前做些什么
+        return Promise.resolve();
+      };
+
+      ((global) => {
+        //index 是对应的微应用名称
+        global["index"] = {
+          bootstrap: () => {
+            console.log("index bootstrap");
+            return Promise.resolve();
+          },
+          mount: (props) => {
+            console.log("index mount", props);
+            props.onGlobalStateChange((state, prev) => {
+              console.log(state, prev);
+            });
+            if (window.__POWERED_BY_QIANKUN__) {
+              __webpack_public_path__ =
+                window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+            }
+            return render();
+          },
+          unmount: () => {
+            console.log("index unmount");
+            return Promise.resolve();
+          },
+        };
+      })(window);
+    </script>
+  </body>
+</html>
