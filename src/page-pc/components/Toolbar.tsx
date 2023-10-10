@@ -11,25 +11,29 @@ interface ToolBarProps {
   onSave: boolean;
 }
 
-const ToolBar: React.FC<ToolBarProps> = (props) => {
-  const { save, clear, preview, publish, dataChange, onSave } = props;
+const ToolBar: React.FC<ToolBarProps> = ({ save, clear, preview, publish, dataChange, onSave }) => {
+  const toolbarClassName = `${css.toolbar}`;
+  const ttClassName = `${css.tt}`;
+  const primaryButtonClassName = `${css.primary} ${onSave ? css.anticon + " " + css.anticonSpin : ""}`;
+  const saveIndicatorClassName = `${css.save}`;
+
   return (
-    <div className={css.toolbar}>
-      <div className={css.tt}>
+    <div className={toolbarClassName}>
+      <div className={ttClassName}>
         &lt;MicroCode&gt; <span>定制你的无代码设计解决方案</span>
       </div>
-      <button className={css.primary} onClick={save}>
+      <button className={primaryButtonClassName} onClick={save}>
         {onSave && (
           <span
             role="img"
             aria-label="loading"
-            className={`${css.anticon} ${css.anticonSpin}`}
+            className={css.anticon}
             style={{ marginRight: "4px" }}
           >
             <SaveLoadingSvg />
           </span>
         )}
-        保存{dataChange && <div className={css.save}>＊</div>}
+        保存{dataChange && <div className={saveIndicatorClassName}>＊</div>}
       </button>
       <button onClick={clear}>清空</button>
       <button onClick={preview}>预览</button>

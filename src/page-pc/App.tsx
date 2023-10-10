@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from "react";
 import { message } from "antd";
 import ToolBar from "./components/Toolbar";
 import css from "./App.less";
-import config from "./AppConfig";
+import config from "./configs/AppConfig";
 import htmlTpt from "./assets/pub-tpt.html";
 
 //在window上获取设计器实例
@@ -109,7 +109,7 @@ export default function App() {
       />
       <div className={css.designer}>
         <Designer
-          config={config(setUseData, useData, save)}
+          config={config(designerRef, save)}
           ref={designerRef}
           onMessage={onMessage}
           onEdit={(...args) => {
