@@ -118,7 +118,6 @@ export default (designerRef?, save?: any) => {
         },
         callConnector(connector: any, params: any) {
           //调用连接器
-          console.log('connector, params', connector, params);
           if (connector.type === "http") {
             //服务接口类型
             return callConnectorHttp(connector, params, {
