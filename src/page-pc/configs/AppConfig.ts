@@ -7,7 +7,7 @@ import servicePlugin, {
 
 const localDataKey = "--mybricks--";
 
-export default (setUseData?: any, useData?: any, save?: any) => {
+export default (designerRef?, save?: any) => {
   return {
     shortcuts: {
       "ctrl+s": [save],
@@ -18,13 +18,15 @@ export default (setUseData?: any, useData?: any, save?: any) => {
       return new Promise<string[]>((resolve, reject) => {
         resolve([
           // PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
-          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.2.88/2023-09-07_21-40-45/edit.js`,
+          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.3.42/2023-10-09_21-54-12/edit.js`,
           // 基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
-          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.61/2023-09-05_20-04-25/edit.js`,
+          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.72/2023-10-09_21-49-15/edit.js`,
           // 图表组件库
-          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/edit.js`,
+          // `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/edit.js`,
           // 拓展组件库
-          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7765_1.0.9/2023-08-08_17-30-11/edit.js`,
+          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7765_1.0.16/2023-09-14_20-30-23/edit.js`,
+          // 门户组件库
+          `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/6807_1.0.6/2023-09-22_15-51-23/edit.js`,
         ]);
         //resolve([testLib])//也可以加载本地组件库
       });
@@ -37,7 +39,7 @@ export default (setUseData?: any, useData?: any, save?: any) => {
           pageContent = JSON.parse(pageContent);
           resolve(pageContent as string);
         } else {
-          return import("./assets/data.json").then((data) => {
+          return import("../assets/data.json").then((data) => {
             pageContent = JSON.parse(JSON.stringify(data));
             resolve(pageContent as string);
           });
