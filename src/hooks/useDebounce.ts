@@ -1,13 +1,9 @@
-import { useRef, useCallback, useEffect } from "react";
+import { useRef, useCallback, useEffect } from 'react';
 
-const useDebounce = (
-  callback: () => void,
-  delay = 1000,
-  dep = []
-) => {
+const useDebounce = (callback: () => void, delay = 1000, dep = []) => {
   const { current } = useRef({
     callback,
-    timer: null as NodeJS.Timeout | null,
+    timer: null as NodeJS.Timeout | null
   });
   useEffect(
     function () {

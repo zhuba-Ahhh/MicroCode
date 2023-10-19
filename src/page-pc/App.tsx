@@ -1,18 +1,11 @@
-import React, {
-  useRef,
-  useMemo,
-  useState,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-} from "react";
-import { useDebounce } from "../hooks";
-import { message, Modal, Button } from "antd";
-import ToolBar from "./components/Toolbar";
-import css from "./App.less";
-import config from "./configs/AppConfig";
-import htmlTpt from "./assets/pub-tpt.html";
-import { localDataKey } from "./common";
+import React, { useRef, useState, useCallback, useEffect } from 'react';
+import { useDebounce } from '../hooks';
+import { message, Modal } from 'antd';
+import ToolBar from './components/Toolbar';
+import css from './App.less';
+import config from './configs/AppConfig';
+import htmlTpt from './assets/pub-tpt.html';
+import { localDataKey } from './common';
 
 const { confirm } = Modal;
 
@@ -26,9 +19,9 @@ export default function App() {
     toJSON: () => any;
   }>();
 
-  const [useData, setUseData] = useState({
-    title: "index",
-    autoSave: true,
+  const [useData, setUseData] = useState<any>({
+    title: 'index',
+    autoSave: true
   });
 
   const [onSave, setOnSave] = useState<boolean>(false);
@@ -54,6 +47,7 @@ export default function App() {
   const save = useCallback(() => {
     setOnSave(true);
     saveJSON();
+    setUseData({});
     setTimeout(() => {
       setOnSave(false);
       setDataChange(false);
@@ -84,16 +78,16 @@ export default function App() {
    */
   const clear = useCallback(() => {
     confirm({
-      title: "确定要清空本地数据嘛?",
+      title: '确定要清空本地数据嘛?',
       // content: "",
       onOk() {
         // window.localStorage.removeItem(localDataKey);
         window.localStorage.setItem(localDataKey, JSON.stringify({}));
         window.location.reload();
       },
-      okText: "确认",
-      cancelText: "取消",
-      onCancel() {},
+      okText: '确认',
+      cancelText: '取消',
+      onCancel() {}
     });
   }, []);
 
@@ -104,12 +98,12 @@ export default function App() {
     //从设计器中获取DSL（JSON）
     const json = designerRef.current?.toJSON();
 
-    window.localStorage.setItem("--preview--", JSON.stringify(json));
+    window.localStorage.setItem('--preview--', JSON.stringify(json));
 
-    const win = window.open("", "preview");
-    if (win?.location.href === "about:blank") {
+    const win = window.open('', 'preview');
+    if (win?.location.href === 'about:blank') {
       // window.open("./preview.html", "preview");
-      win.location.href = "./preview.html";
+      win.location.href = './preview.html';
     } else {
       win?.focus();
     }
@@ -126,9 +120,9 @@ export default function App() {
 
     //-----------------------------------------------
 
-    const linkNode = document.createElement("a");
+    const linkNode = document.createElement('a');
     linkNode.download = `${title}.html`;
-    linkNode.style.display = "none";
+    linkNode.style.display = 'none';
     const blob = new Blob([html]);
     linkNode.href = URL.createObjectURL(blob);
 
@@ -154,7 +148,7 @@ export default function App() {
           config={config(designerRef, save)}
           ref={designerRef}
           onMessage={onMessage}
-          onEdit={(...args: any[]) => {
+          onEdit={() => {
             setDataChange(true);
           }}
         />

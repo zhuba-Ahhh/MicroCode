@@ -17,7 +17,7 @@ module.exports = class IgnoreNotFoundExportPlugin {
     this.include.forEach((matcher, i) => {
       if (!(matcher instanceof RegExp)) {
         throw new TypeError(
-          `IgnoreNotFoundExportPlugin: argument[${i}] must be an instance of RegExp.`,
+          `IgnoreNotFoundExportPlugin: argument[${i}] must be an instance of RegExp.`
         );
       }
     });
@@ -43,7 +43,7 @@ module.exports = class IgnoreNotFoundExportPlugin {
             this.isModuleDependencyWarning(warning) &&
             EXPORT_NOT_FOUND_REG_EXP.test(warning.message) &&
             this.isResourcePathAllowed(warning.module.resource)
-          ),
+          )
       );
     });
   }

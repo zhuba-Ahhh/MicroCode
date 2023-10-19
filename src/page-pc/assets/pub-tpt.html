@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN" class="no-js">
   <head>
     <meta charset="utf-8" />
@@ -65,12 +65,9 @@
       /**
        * 设计器导出的项目JSON
        */
-      const projectJson = "-projectJson-"; //replace it
+      const projectJson = '-projectJson-'; //replace it
 
-      ReactDom.render(
-        React.createElement(Page),
-        document.querySelector("#app")
-      );
+      ReactDom.render(React.createElement(Page), document.querySelector('#app'));
 
       function Page(props) {
         return renderUI(projectJson, {
@@ -78,8 +75,8 @@
             //对组件的运行环境扩展
             callConnector() {
               ////TODO
-            },
-          },
+            }
+          }
         });
       }
     </script>
@@ -93,26 +90,25 @@
 
       ((global) => {
         //index 是对应的微应用名称
-        global["index"] = {
+        global['index'] = {
           bootstrap: () => {
-            console.log("index bootstrap");
+            console.log('index bootstrap');
             return Promise.resolve();
           },
           mount: (props) => {
-            console.log("index mount", props);
+            console.log('index mount', props);
             props.onGlobalStateChange((state, prev) => {
               console.log(state, prev);
             });
             if (window.__POWERED_BY_QIANKUN__) {
-              __webpack_public_path__ =
-                window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+              __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
             }
             return render();
           },
           unmount: () => {
-            console.log("index unmount");
+            console.log('index unmount');
             return Promise.resolve();
-          },
+          }
         };
       })(window);
     </script>

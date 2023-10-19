@@ -1,7 +1,7 @@
-import React from "react";
-import css from "./Toolbar.less";
-import SaveLoadingSvg from "../svg/saveLoading.svg";
-import { Switch } from "antd";
+import React from 'react';
+import css from './Toolbar.less';
+import SaveLoadingSvg from '../svg/saveLoading.svg';
+import { Switch } from 'antd';
 
 interface ToolBarProps {
   save: () => void;
@@ -20,11 +20,11 @@ const ToolBar: React.FC<ToolBarProps> = ({
   preview,
   publish,
   dataChange,
-  onSave,
+  onSave
 }) => {
   const toolbarClassName = `${css.toolbar}`;
   const ttClassName = `${css.tt}`;
-  const primaryButtonClassName = `${css.primary} ${onSave ? css.anticon : ""}`;
+  const primaryButtonClassName = `${css.primary} ${onSave ? css.anticon : ''}`;
   const saveIndicatorClassName = `${css.save}`;
 
   const onChange = (checked: boolean) => {
@@ -36,16 +36,13 @@ const ToolBar: React.FC<ToolBarProps> = ({
       <div className={ttClassName}>
         &lt;MicroCode&gt; <span>定制你的无代码设计解决方案</span>
       </div>
-      <button
-        className={primaryButtonClassName + " " + css.button}
-        onClick={save}
-      >
+      <button className={primaryButtonClassName + ' ' + css.button} onClick={save}>
         {onSave && (
           <span
             role="img"
             aria-label="loading"
             className={`${css.anticon} ${css.anticonSpin}`}
-            style={{ marginRight: "4px" }}
+            style={{ marginRight: '4px' }}
           >
             <SaveLoadingSvg />
           </span>

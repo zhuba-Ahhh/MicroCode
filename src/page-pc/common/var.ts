@@ -1,5 +1,3 @@
-const localDataKey = "--mybricks--";
+const localDataKey = '--mybricks--';
 
-export {
-	localDataKey
-}
+export { localDataKey };
