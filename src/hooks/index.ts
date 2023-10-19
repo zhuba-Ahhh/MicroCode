@@ -1,5 +1,3 @@
-import useDebounce from "./useDebounce";
+import useDebounce from './useDebounce';
 
-export {
-	useDebounce
-}
+export { useDebounce };

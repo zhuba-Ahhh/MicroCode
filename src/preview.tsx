@@ -1,16 +1,18 @@
-import { render } from "react-dom";
+// eslint-disable-next-line react/no-deprecated
+import { render } from 'react-dom';
 
 //连接器运行时
-import { call, mock } from "@mybricks/plugin-connector-http";
-import React from "react";
+import { mock } from '@mybricks/plugin-connector-http';
+import React from 'react';
 
 //引擎发布导出的JSON数据，这里是从localStorage中获取
-let json = localStorage.getItem("--preview--");
+let json = localStorage.getItem('--preview--');
 
 if (!json) {
-  throw new Error("数据错误");
+  throw new Error('数据错误');
 }
 
+// eslint-disable-next-line no-useless-catch
 try {
   json = JSON.parse(json);
 } catch (ex) {
@@ -22,7 +24,7 @@ const { render: renderUI } = (window as any)._mybricks_render_web;
 
 //----------------------------------------------------------------------------
 
-render(<Page />, document.querySelector("#root"));
+render(<Page />, document.querySelector('#root'));
 
 function Page() {
   return (
@@ -42,17 +44,17 @@ function Page() {
           events: [
             //配置事件
             {
-              type: "jump",
-              title: "跳转到",
+              type: 'jump',
+              title: '跳转到',
               exe({ options }) {
                 const page = options.page;
                 if (page) {
                   window.location.href = page;
                 }
-              },
-            },
-          ],
-        },
+              }
+            }
+          ]
+        }
         //observable
       })}
     </div>

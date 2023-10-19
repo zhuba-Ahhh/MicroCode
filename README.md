@@ -37,7 +37,7 @@ pnpm build
 ### 查看效果
 
 ```bash
-pnpm i serve -g 
+pnpm i serve -g
 
 serve dist -l 4005
 ```
