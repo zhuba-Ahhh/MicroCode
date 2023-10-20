@@ -48,7 +48,7 @@ export default (designerRef?: any, save?: any) => {
       geoView: {
         //配置布局视图
         type: 'pc', //pc或mobile
-        nav: { float: false }, //大纲及组件视图的展现方式
+        nav: { float: true }, //大纲及组件视图的展现方式
         scenes: {
           //多场景【非必选】
           adder: [

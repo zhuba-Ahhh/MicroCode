@@ -1,16 +1,15 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { useDebounce } from '../hooks';
-import { message, Modal } from 'antd';
-import ToolBar from './components/Toolbar';
+
 import css from './App.less';
+import { message, Modal } from 'antd';
+import { useDataJSON } from './types';
+import { useDebounce } from '../hooks';
 import config from './configs/AppConfig';
+import ToolBar from './components/Toolbar';
 import htmlTpt from './assets/pub-tpt.html';
 import { localDataKey, localUseDataKey } from './common';
-import { useDataJSON } from './types';
 
 const { confirm } = Modal;
-
-const userInfoContent = window.localStorage.getItem(localUseDataKey);
 
 //在window上获取设计器实例
 const Designer = (window as any).mybricks.SPADesigner;
@@ -22,6 +21,7 @@ export default function App() {
     toJSON: () => any;
   }>();
 
+  const userInfoContent = window.localStorage.getItem(localUseDataKey);
   const userInfo: useDataJSON = userInfoContent
     ? JSON.parse(userInfoContent)
     : {
@@ -46,7 +46,6 @@ export default function App() {
   const saveJSON = useCallback(() => {
     const json = designerRef.current?.dump();
     window.localStorage.setItem(localDataKey, JSON.stringify(json));
-    console.log('userDataJSON', userDataJSON);
     window.localStorage.setItem(localUseDataKey, JSON.stringify(userDataJSON));
   }, []);
 
