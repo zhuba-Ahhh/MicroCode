@@ -5,9 +5,12 @@ import ToolBar from './components/Toolbar';
 import css from './App.less';
 import config from './configs/AppConfig';
 import htmlTpt from './assets/pub-tpt.html';
-import { localDataKey } from './common';
+import { localDataKey, localUseDataKey } from './common';
+import { useDataJSON } from './types';
 
 const { confirm } = Modal;
+
+const userInfoContent = window.localStorage.getItem(localUseDataKey);
 
 //在window上获取设计器实例
 const Designer = (window as any).mybricks.SPADesigner;
@@ -19,10 +22,14 @@ export default function App() {
     toJSON: () => any;
   }>();
 
-  const [useData, setUseData] = useState<any>({
-    title: 'index',
-    autoSave: true
-  });
+  const userInfo: useDataJSON = userInfoContent
+    ? JSON.parse(userInfoContent)
+    : {
+        title: 'index',
+        autoSave: true
+      };
+
+  const [userDataJSON, setUserDataJSON] = useState<useDataJSON>(userInfo);
 
   const [onSave, setOnSave] = useState<boolean>(false);
   const [onAutoSave, setOnAutoSave] = useState<boolean>(false);
@@ -39,6 +46,8 @@ export default function App() {
   const saveJSON = useCallback(() => {
     const json = designerRef.current?.dump();
     window.localStorage.setItem(localDataKey, JSON.stringify(json));
+    console.log('userDataJSON', userDataJSON);
+    window.localStorage.setItem(localUseDataKey, JSON.stringify(userDataJSON));
   }, []);
 
   /**
@@ -47,7 +56,6 @@ export default function App() {
   const save = useCallback(() => {
     setOnSave(true);
     saveJSON();
-    setUseData({});
     setTimeout(() => {
       setOnSave(false);
       setDataChange(false);
@@ -113,7 +121,7 @@ export default function App() {
    * 发布（导出）
    */
   const publish = useCallback(() => {
-    const title = useData.title; //页面标题
+    const title = userDataJSON.title; //页面标题
     const json = designerRef.current?.toJSON();
     let html = htmlTpt.replace(`--title--`, title); //替换
     html = html.replace(`"-projectJson-"`, JSON.stringify(json)); //替换
@@ -130,7 +138,7 @@ export default function App() {
     linkNode.click();
 
     document.body.removeChild(linkNode);
-  }, [useData]);
+  }, [userDataJSON]);
 
   return (
     <div className={css.show}>
@@ -142,6 +150,7 @@ export default function App() {
         publish={publish}
         dataChange={dataChange}
         onSave={onSave}
+        setUserDataJSON={setUserDataJSON}
       />
       <div className={css.designer}>
         <Designer
