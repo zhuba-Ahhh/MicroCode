@@ -2,25 +2,28 @@ import React from 'react';
 import css from './Toolbar.less';
 import SaveLoadingSvg from '../svg/saveLoading.svg';
 import { Switch } from 'antd';
+import { useDataJSON } from '../types';
 
 interface ToolBarProps {
+  onSave: boolean;
+  dataChange: boolean;
   save: () => void;
-  autoSave: (what: boolean) => void;
   clear: () => void;
   preview: () => void;
   publish: () => void;
-  dataChange: boolean;
-  onSave: boolean;
+  autoSave: (what: boolean) => void;
+  setUserDataJSON: React.Dispatch<React.SetStateAction<useDataJSON>>;
 }
 
 const ToolBar: React.FC<ToolBarProps> = ({
   save,
-  autoSave,
   clear,
+  onSave,
   preview,
   publish,
+  autoSave,
   dataChange,
-  onSave
+  setUserDataJSON
 }) => {
   const toolbarClassName = `${css.toolbar}`;
   const ttClassName = `${css.tt}`;
@@ -29,6 +32,10 @@ const ToolBar: React.FC<ToolBarProps> = ({
 
   const onChange = (checked: boolean) => {
     autoSave(checked);
+    setUserDataJSON((pre) => ({
+      ...pre,
+      autoSave: checked
+    }));
   };
 
   return (
