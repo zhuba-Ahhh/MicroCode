@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { memo, useEffect, useCallback } from 'react';
 import css from './Toolbar.less';
 import SaveLoadingSvg from '../svg/saveLoading.svg';
 import { Switch } from 'antd';
 import { useDataJSON } from '../types';
 
-interface ToolBarProps {
+export interface ToolBarProps {
   onSave: boolean;
   dataChange: boolean;
   save: () => void;
@@ -12,6 +12,7 @@ interface ToolBarProps {
   preview: () => void;
   publish: () => void;
   autoSave: (what: boolean) => void;
+  userDataJSON: useDataJSON;
   setUserDataJSON: React.Dispatch<React.SetStateAction<useDataJSON>>;
 }
 
@@ -23,6 +24,7 @@ const ToolBar: React.FC<ToolBarProps> = ({
   publish,
   autoSave,
   dataChange,
+  userDataJSON,
   setUserDataJSON
 }) => {
   const toolbarClassName = `${css.toolbar}`;
@@ -30,13 +32,17 @@ const ToolBar: React.FC<ToolBarProps> = ({
   const primaryButtonClassName = `${css.primary} ${onSave ? css.anticon : ''}`;
   const saveIndicatorClassName = `${css.save}`;
 
-  const onChange = (checked: boolean) => {
+  useEffect(() => {
+    autoSave(!!userDataJSON?.autoSave || false);
+  }, []);
+
+  const onChange = useCallback((checked: boolean) => {
     autoSave(checked);
     setUserDataJSON((pre) => ({
       ...pre,
       autoSave: checked
     }));
-  };
+  }, []);
 
   return (
     <div className={toolbarClassName}>
@@ -70,9 +76,10 @@ const ToolBar: React.FC<ToolBarProps> = ({
         checkedChildren="自动保存"
         unCheckedChildren="自动保存"
         onChange={onChange}
+        defaultChecked={!!userDataJSON?.autoSave || false}
       />
     </div>
   );
 };
 
-export default ToolBar;
+export default memo(ToolBar);

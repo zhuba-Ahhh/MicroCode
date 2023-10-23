@@ -43,11 +43,20 @@ export default function App() {
     message[type](msg);
   }, []);
 
+  /**
+   * 保存引擎搭建相关数据
+   */
   const saveJSON = useCallback(() => {
     const json = designerRef.current?.dump();
     window.localStorage.setItem(localDataKey, JSON.stringify(json));
+  }, [userDataJSON]);
+
+  /**
+   * 保存用户相关数据
+   */
+  useEffect(() => {
     window.localStorage.setItem(localUseDataKey, JSON.stringify(userDataJSON));
-  }, []);
+  }, [userDataJSON]) 
 
   /**
    * 保存
@@ -137,7 +146,7 @@ export default function App() {
     linkNode.click();
 
     document.body.removeChild(linkNode);
-  }, [userDataJSON]);
+  }, []);
 
   return (
     <div className={css.show}>
@@ -150,6 +159,7 @@ export default function App() {
         dataChange={dataChange}
         onSave={onSave}
         setUserDataJSON={setUserDataJSON}
+        userDataJSON={userDataJSON}
       />
       <div className={css.designer}>
         <Designer
