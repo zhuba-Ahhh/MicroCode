@@ -85,7 +85,7 @@ export default function App() {
    */
   const clear = useCallback(() => {
     confirm({
-      title: '确定要清空本地数据嘛?',
+      title: '确定要清空数据嘛?',
       // content: "",
       onOk() {
         // window.localStorage.removeItem(localDataKey);
