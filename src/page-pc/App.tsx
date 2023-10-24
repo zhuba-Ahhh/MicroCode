@@ -1,18 +1,15 @@
-import React, { useRef, useState, useCallback, useEffect } from 'react';
+import React, { useMemo, useRef, useState, useCallback, useEffect, useLayoutEffect } from 'react';
 
 import css from './App.less';
 import { message, Modal } from 'antd';
 import { useDataJSON } from './types';
 import { useDebounce } from '../hooks';
-import config from './configs/AppConfig';
+import config from './configs';
 import ToolBar from './components/Toolbar';
 import htmlTpt from './assets/pub-tpt.html';
 import { localDataKey, localUseDataKey } from './common';
 
 const { confirm } = Modal;
-
-//在window上获取设计器实例
-const Designer = (window as any).mybricks.SPADesigner;
 
 export default function App() {
   const designerRef = useRef<{
@@ -29,11 +26,28 @@ export default function App() {
         autoSave: true
       };
 
+  const [projectJson, setProjectJson] = useState<string>('');
   const [userDataJSON, setUserDataJSON] = useState<useDataJSON>(userInfo);
-
   const [onSave, setOnSave] = useState<boolean>(false);
   const [onAutoSave, setOnAutoSave] = useState<boolean>(false);
   const [dataChange, setDataChange] = useState<boolean>(false);
+  const [SPADesigner, setSPADesigner] = useState<any>(null);
+
+  useLayoutEffect(() => {
+    const pageContent = window.localStorage.getItem(localDataKey);
+    if (pageContent) {
+      setProjectJson(JSON.parse(pageContent || '{}'));
+    } else {
+      import('./assets/data.json').then((data) => {
+        setProjectJson(JSON.parse(JSON.stringify(data)) || '{}');
+      });
+    }
+  }, []);
+
+  //在window上获取设计器实例
+  useMemo(() => {
+    (window as any).mybricks.SPADesigner && setSPADesigner((window as any).mybricks.SPADesigner);
+  }, []);
 
   /**
    * 处理引擎消息
@@ -56,7 +70,14 @@ export default function App() {
    */
   useEffect(() => {
     window.localStorage.setItem(localUseDataKey, JSON.stringify(userDataJSON));
-  }, [userDataJSON]) 
+  }, [userDataJSON]);
+
+  const changeUserDataJSON = useCallback((value: any) => {
+    setUserDataJSON({
+      ...userDataJSON,
+      ...value
+    });
+  }, []);
 
   /**
    * 保存
@@ -132,7 +153,7 @@ export default function App() {
     const title = userDataJSON.title; //页面标题
     const json = designerRef.current?.toJSON();
     let html = htmlTpt.replace(`--title--`, title); //替换
-    html = html.replace(`"-projectJson-"`, JSON.stringify(json)); //替换
+    html = html.replace(`'-projectJson-'`, JSON.stringify(json)); //替换
 
     //-----------------------------------------------
 
@@ -152,24 +173,26 @@ export default function App() {
     <div className={css.show}>
       <ToolBar
         save={save}
-        autoSave={autoSave}
         clear={clear}
+        onSave={onSave}
         preview={preview}
         publish={publish}
+        autoSave={autoSave}
         dataChange={dataChange}
-        onSave={onSave}
-        setUserDataJSON={setUserDataJSON}
         userDataJSON={userDataJSON}
+        setUserDataJSON={setUserDataJSON}
       />
       <div className={css.designer}>
-        <Designer
-          config={config(designerRef, save)}
-          ref={designerRef}
-          onMessage={onMessage}
-          onEdit={() => {
-            setDataChange(true);
-          }}
-        />
+        {projectJson && SPADesigner && (
+          <SPADesigner
+            ref={designerRef}
+            onMessage={onMessage}
+            onEdit={() => {
+              setDataChange(true);
+            }}
+            config={config(designerRef, save, projectJson, userDataJSON, changeUserDataJSON)}
+          />
+        )}
       </div>
     </div>
   );
