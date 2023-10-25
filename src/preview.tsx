@@ -55,7 +55,6 @@ function Page() {
             }
           ]
         }
-        //observable
       })}
     </div>
   );
