@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface Props {}
-
-const Index: React.FC<Props> = () => {
+const Index: () => React.JSX.Element = () => {
   return (
     <div className="container">
       <h1>

@@ -1,12 +1,17 @@
 import React from 'react';
-import Index from './components/Index';
+import { Route, Routes } from 'react-router-dom';
 import './components/index.less';
+
+import routes from './router';
+import { uuid } from '../tools';
 
 const App: React.FC = () => {
   return (
-    <>
-      <Index />
-    </>
+    <Routes>
+      {routes.map((route) => (
+        <Route path={route.path} element={route.element()} key={uuid()} />
+      ))}
+    </Routes>
   );
 };
 
