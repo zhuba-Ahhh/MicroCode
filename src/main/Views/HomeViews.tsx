@@ -1,7 +1,6 @@
 import React from 'react';
-import './index.less';
 
-const Index: () => React.JSX.Element = () => {
+const HomeViews: () => React.JSX.Element = () => {
   return (
     <div className="container">
       <h1>
@@ -28,4 +27,4 @@ const Index: () => React.JSX.Element = () => {
   );
 };
 
-export default Index;
+export default HomeViews;
