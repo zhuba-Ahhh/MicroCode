@@ -4,7 +4,7 @@ export default (projectJson: string) => ({
     return new Promise<string[]>((resolve) => {
       resolve([
         // PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
-        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.3.90/2023-11-03_17-13-02/edit.js`,
+        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7632_1.4.6/2023-11-14_20-02-29/edit.js`,
         // 基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
         `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/7182_1.0.79/2023-11-03_11-41-19/edit.js`
         // 图表组件库
