@@ -44,6 +44,21 @@ export default function App() {
     }
   }, []);
 
+  // 重载页面 未保存数据提示
+  useEffect(() => {
+    const beforeunload = (e: any) => {
+      if (dataChange) {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('beforeunload', beforeunload);
+
+    return () => {
+      window.removeEventListener('beforeunload', beforeunload);
+    };
+  }, [dataChange]);
+
   //在window上获取设计器实例
   useMemo(() => {
     (window as any).mybricks.SPADesigner && setSPADesigner((window as any).mybricks.SPADesigner);
