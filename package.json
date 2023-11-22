@@ -25,6 +25,7 @@
   "dependencies": {
     "@mybricks/plugin-connector-http": "^1.1.50",
     "@mybricks/plugin-tools": "^1.0.17",
+    "@mybricks/sdk-for-app": "1.0.11",
     "antd": "^4.23.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

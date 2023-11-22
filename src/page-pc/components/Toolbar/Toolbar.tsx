@@ -1,8 +1,8 @@
 import React, { memo, useEffect, useCallback } from 'react';
 import css from './Toolbar.less';
-import SaveLoadingSvg from '../svg/saveLoading.svg';
+import SaveLoadingSvg from '../../svg/saveLoading.svg';
 import { Switch } from 'antd';
-import { useDataJSON } from '../types';
+import { useDataJSON } from '../../types';
 
 export interface ToolBarProps {
   onSave: boolean;
