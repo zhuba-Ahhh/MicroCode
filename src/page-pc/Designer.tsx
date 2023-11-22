@@ -5,7 +5,8 @@ import { message, Modal } from 'antd';
 import { useDataJSON } from './types';
 import { useDebounce, useBeforeUnload } from '../hooks';
 import config from './configs';
-import ToolBar from './components/Toolbar';
+import ToolBar from './components/Toolbar/Toolbar';
+import { GlobalLoading } from './components/globalLoading/index';
 import htmlTpt from './assets/pub-tpt.html';
 import { localDataKey, localUseDataKey } from './common';
 import { createHtml } from '../tools';
@@ -89,9 +90,13 @@ export default function Designer() {
   const save = useCallback(() => {
     setOnSave(true);
     saveJSON();
+    const hide = GlobalLoading.open('保存中，请稍后...', {
+      wrapperClassName: 'microcode-theme'
+    });
     setTimeout(() => {
       setOnSave(false);
       setDataChange(false);
+      hide();
       message.success(`保存完成`);
     }, 1000);
   }, []);
