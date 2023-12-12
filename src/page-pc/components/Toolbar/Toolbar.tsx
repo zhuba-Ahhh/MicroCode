@@ -1,8 +1,9 @@
 import React, { memo, useEffect, useCallback } from 'react';
-import css from './Toolbar.less';
-import SaveLoadingSvg from '../../svg/saveLoading.svg';
 import { Switch } from 'antd';
+import css from './Toolbar.less';
 import { useDataJSON } from '../../types';
+import { Tips } from './Tips';
+import SaveLoadingSvg from '../../svg/saveLoading.svg';
 
 export interface ToolBarProps {
   onSave: boolean;
@@ -49,6 +50,7 @@ const ToolBar: React.FC<ToolBarProps> = ({
       <div className={ttClassName}>
         &lt;MicroCode&gt; <span>定制你的无代码设计解决方案</span>
       </div>
+      <Tips />
       <button className={primaryButtonClassName + ' ' + css.button} onClick={save}>
         {onSave && (
           <span

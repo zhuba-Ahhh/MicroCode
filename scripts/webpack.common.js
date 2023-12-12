@@ -1,7 +1,7 @@
 const path = require('path');
 
 const WebpackBar = require('webpackbar');
-// const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ignoreWarningPlugin = require('./_ignoreWarningPlugin');
 
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
         use: ['style-loader', 'css-loader']
       },
       {
@@ -117,7 +117,7 @@ module.exports = {
     new ignoreWarningPlugin(),
     new CopyWebpackPlugin({
       patterns: [{ from: 'public', to: outputPath }]
-    })
-    // new ESLintPlugin()
+    }),
+    new ESLintPlugin()
   ]
 };
