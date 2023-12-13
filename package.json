@@ -8,9 +8,6 @@
     "build": "rm -rf 'dist' && NODE_ENV=production webpack --config ./scripts/webpack.dev.js",
     "prepare": "husky install"
   },
-  "pre-commit": [
-    "lint-staged"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zhuba-Ahhh/MicroCode"
