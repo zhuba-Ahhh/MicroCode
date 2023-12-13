@@ -1,7 +1,6 @@
 const path = require('path');
 
 const WebpackBar = require('webpackbar');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ignoreWarningPlugin = require('./_ignoreWarningPlugin');
 
@@ -118,6 +117,5 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: 'public', to: outputPath }]
     }),
-    new ESLintPlugin()
   ]
 };
