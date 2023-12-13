@@ -1,11 +1,18 @@
 import { message } from 'antd';
 
+interface optionsType {
+  options: {
+    page?: string;
+    url?: string;
+  };
+}
+
 const events = [
   //配置事件【非必选】
   {
     type: 'jump',
     title: '跳转到',
-    exe({ options }) {
+    exe({ options }: optionsType) {
       const page = options.page;
       if (page) {
         window.location.href = page;
@@ -23,7 +30,7 @@ const events = [
     type: 'pushState',
     title: '路由跳转',
     default: false,
-    exe({ options }) {
+    exe({ options }: optionsType) {
       message.info(`路由跳转:${options.url}`);
     },
     options: [
@@ -38,7 +45,7 @@ const events = [
     type: 'openWindow',
     title: '打开新窗口',
     default: false,
-    exe({ options }) {
+    exe({ options }: optionsType) {
       message.info(`打开新窗口:${options.url}`);
     },
     options: [

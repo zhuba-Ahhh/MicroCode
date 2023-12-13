@@ -1,27 +1,28 @@
-import React, { FC, memo, useState } from 'react';
-import { Popover, Modal, Divider } from 'antd';
-import css from './index.less';
-import { keyIcon } from './Icons';
-import { uuid } from '../../../../tools';
-import { infoList, optList, Opt } from './constants';
+import { Divider, Modal, Popover } from 'antd'
+import React, { type FC, memo, useState } from 'react'
+
+import { uuid } from '../../../../tools'
+import { infoList, type Opt, optList } from './constants'
+import { keyIcon } from './Icons'
+import css from './index.less'
 
 interface TipsProps {
-  opt?: Opt[];
-  info?: Opt[];
+  opt?: Opt[]
+  info?: Opt[]
 }
 
 const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
-  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
 
   const listItemRender = (list: Opt[], itemStyle: string) => {
     return (
       <div className={itemStyle === 'info' ? css.infoItem : css.optItem}>
-        {list?.length > 0 &&
+        {list.length > 0 &&
           list.map((item) => (
             <div className={css.itemList} key={uuid()}>
               <div className={css.itemListLeft}>{item.name}</div>
               <div className={css.itemListRight}>
-                {item?.keys &&
+                {item.keys &&
                   item.keys.length > 0 &&
                   item.keys.map((key) => (
                     <div className={itemStyle === 'info' ? css.liBtn : css.liOpt} key={uuid()}>
@@ -32,8 +33,8 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
             </div>
           ))}
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div>
@@ -43,7 +44,12 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
           overlayClassName={css.overlayFilePopover}
           content={<div className={css.fileInfo}>快捷键和常规操作</div>}
         >
-          <div onClick={() => setIsInfoModalOpen(true)} className={css.item}>
+          <div
+            onClick={() => {
+              setIsInfoModalOpen(true)
+            }}
+            className={css.item}
+          >
             <div className={css.filePosition}>{keyIcon}</div>
           </div>
         </Popover>
@@ -52,7 +58,9 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
         visible={isInfoModalOpen}
         title="快捷键和常规操作"
         footer={null}
-        onCancel={() => setIsInfoModalOpen(false)}
+        onCancel={() => {
+          setIsInfoModalOpen(false)
+        }}
         width={1060}
       >
         <div className={css.itemContent}>
@@ -62,7 +70,7 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
         </div>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
-export default memo(Tips);
+export default memo(Tips)

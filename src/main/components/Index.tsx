@@ -1,7 +1,8 @@
-import React from 'react';
-import './index.less';
+import './index.less'
 
-const Index: () => React.JSX.Element = () => {
+import React, { type FC } from 'react'
+
+const Index: FC = () => {
   return (
     <div className="container">
       <h1>
@@ -25,7 +26,7 @@ const Index: () => React.JSX.Element = () => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

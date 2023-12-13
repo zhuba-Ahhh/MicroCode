@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 /**
  *
@@ -7,7 +7,7 @@ import { useRef, useCallback, useEffect } from 'react';
  * @param dep 依赖 []
  * @returns 处理后的函数
  */
-const useDebounce = (callback: () => void, delay: number = 1000, dep: any[] = []) => {
+const useDebounce = (callback: () => void, delay = 1000, dep: any[] = []) => {
   const { current } = useRef({
     callback,
     timer: null as NodeJS.Timeout | null
@@ -26,7 +26,7 @@ const useDebounce = (callback: () => void, delay: number = 1000, dep: any[] = []
     current.timer = setTimeout(() => {
       current.callback(...args);
     }, delay);
-  }, dep || []);
+  }, dep);
 };
 
 export default useDebounce;
