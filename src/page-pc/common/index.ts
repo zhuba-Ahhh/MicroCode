@@ -1,2 +1,2 @@
-export * from './var';
 export * from './enum';
+export * from './var';

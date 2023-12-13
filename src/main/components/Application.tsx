@@ -1,8 +1,8 @@
-import './Application.less'
+import './Application.less';
 
-import React, { useCallback } from 'react'
+import React, { useCallback } from 'react';
 
-import { uuid } from '../../tools/math'
+import { uuid } from '../../tools/math';
 
 const Application = (data: any[]) => {
   const render = useCallback(() => {
@@ -15,10 +15,10 @@ const Application = (data: any[]) => {
           </div>
         </a>
       </li>
-    ))
-  }, [])
+    ));
+  }, []);
 
-  return <ul>{render()}</ul>
-}
+  return <ul>{render()}</ul>;
+};
 
-export default Application
+export default Application;

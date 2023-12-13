@@ -1,21 +1,21 @@
-import { Switch } from 'antd'
-import React, { type FC, memo, useCallback, useEffect } from 'react'
+import { Switch } from 'antd';
+import React, { type FC, memo, useCallback, useEffect } from 'react';
 
-import SaveLoadingSvg from '../../svg/saveLoading.svg'
-import type { useDataJSON } from '../../types'
-import Tips from './Tips'
-import css from './Toolbar.less'
+import SaveLoadingSvg from '../../svg/saveLoading.svg';
+import type { useDataJSON } from '../../types';
+import Tips from './Tips';
+import css from './Toolbar.less';
 
 export interface ToolBarProps {
-  onSave: boolean
-  dataChange: boolean
-  save: () => void
-  clear: () => void
-  preview: () => void
-  publish: () => void
-  autoSave: (what: boolean) => void
-  userDataJSON: useDataJSON
-  setUserDataJSON: React.Dispatch<React.SetStateAction<useDataJSON>>
+  onSave: boolean;
+  dataChange: boolean;
+  save: () => void;
+  clear: () => void;
+  preview: () => void;
+  publish: () => void;
+  autoSave: (what: boolean) => void;
+  userDataJSON: useDataJSON;
+  setUserDataJSON: React.Dispatch<React.SetStateAction<useDataJSON>>;
 }
 
 const ToolBar: FC<ToolBarProps> = ({
@@ -27,24 +27,24 @@ const ToolBar: FC<ToolBarProps> = ({
   autoSave,
   dataChange,
   userDataJSON,
-  setUserDataJSON,
+  setUserDataJSON
 }) => {
-  const toolbarClassName = `${css.toolbar}`
-  const ttClassName = `${css.tt}`
-  const primaryButtonClassName = `${css.primary} ${onSave ? css.anticon : ''}`
-  const saveIndicatorClassName = `${css.save}`
+  const toolbarClassName = `${css.toolbar}`;
+  const ttClassName = `${css.tt}`;
+  const primaryButtonClassName = `${css.primary} ${onSave ? css.anticon : ''}`;
+  const saveIndicatorClassName = `${css.save}`;
 
   useEffect(() => {
-    autoSave(!!userDataJSON.autoSave || false)
-  }, [])
+    autoSave(!!userDataJSON.autoSave || false);
+  }, []);
 
   const onChange = useCallback((checked: boolean) => {
-    autoSave(checked)
+    autoSave(checked);
     setUserDataJSON((pre) => ({
       ...pre,
-      autoSave: checked,
-    }))
-  }, [])
+      autoSave: checked
+    }));
+  }, []);
 
   return (
     <div className={toolbarClassName}>
@@ -82,7 +82,7 @@ const ToolBar: FC<ToolBarProps> = ({
         defaultChecked={!!userDataJSON.autoSave || false}
       />
     </div>
-  )
-}
+  );
+};
 
-export default memo(ToolBar)
+export default memo(ToolBar);
