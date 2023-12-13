@@ -9,8 +9,7 @@ declare module '*.html' {
 }
 
 declare module '*.svg' {
-  import { ReactComponent } from 'react';
-
-  const content: ReactComponent;
+  import ReactNode from 'react';
+  const content: ReactNode;
   export default content;
 }
