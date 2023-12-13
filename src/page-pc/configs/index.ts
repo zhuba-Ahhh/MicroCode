@@ -1,13 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import toolsPlugin from '@mybricks/plugin-tools';
-
 //加载连接器插件
 import servicePlugin from '@mybricks/plugin-connector-http';
-import comEnv from './comEnv';
-import Views from './Views';
-import Loaders from './Loaders';
+import toolsPlugin from '@mybricks/plugin-tools';
 
-import { useDataJSON } from '../types';
+import type { useDataJSON } from '../types';
+import comEnv from './comEnv';
+import Loaders from './Loaders';
+import Views from './Views';
 
 export default (
   designerRef: any,

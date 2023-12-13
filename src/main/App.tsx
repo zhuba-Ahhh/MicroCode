@@ -1,9 +1,10 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './components/index.less';
+import './components/index.less'
 
-import routes from './router';
-import { uuid } from '../tools';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+
+import { uuid } from '../tools'
+import routes from './router'
 
 const App: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const App: React.FC = () => {
         <Route path={route.path} element={route.element()} key={uuid()} />
       ))}
     </Routes>
-  );
-};
+  )
+}
 
-export default App;
+export default App

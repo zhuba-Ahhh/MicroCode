@@ -12,7 +12,7 @@ export default (projectJson: string) => ({
         // 拓展组件库
         // `https://assets.mybricks.world/comlibs/mybricks.pro-pc/1.0.57/2023-12-04_20-28-04/edit.js`,
         // 门户组件库
-        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/6807_1.0.6/2023-09-22_15-51-23/edit.js`,
+        `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/6807_1.0.6/2023-09-22_15-51-23/edit.js`
       ]);
       //resolve([testLib]) //也可以加载本地组件库
     });

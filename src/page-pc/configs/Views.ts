@@ -1,4 +1,4 @@
-import { useDataJSON } from '../types';
+import type { useDataJSON } from '../types';
 
 export default (userDataJSON: useDataJSON, changeUserDataJSON: (value: any) => void) => ({
   geoView: {

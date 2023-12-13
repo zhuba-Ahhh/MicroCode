@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { type FC } from 'react'
 
-const HomeViews: () => React.JSX.Element = () => {
+const HomeViews: FC = () => {
   return (
     <div className="container">
       <h1>
@@ -24,7 +24,7 @@ const HomeViews: () => React.JSX.Element = () => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default HomeViews;
+export default HomeViews

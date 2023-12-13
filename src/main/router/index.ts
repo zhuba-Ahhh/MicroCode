@@ -1,11 +1,13 @@
+import type { FC } from 'react';
+
 import HomeView from '../components/Index';
 
 export interface routeType {
   path: string;
-  element: () => JSX.Element;
+  element: FC;
 }
 
-const routes: Array<routeType> = [
+const routes: routeType[] = [
   {
     path: '/',
     element: HomeView

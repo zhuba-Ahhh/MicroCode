@@ -4,7 +4,7 @@
  * @param pre 前缀
  * @returns uuid
  */
-export const uuid = (len: number = 6, pre: string = 'u_'): string => {
+export const uuid = (len = 6, pre = 'u_'): string => {
   const seed = 'abcdefhijkmnprstwxyz0123456789',
     maxPos = seed.length;
   let rtn = '';
