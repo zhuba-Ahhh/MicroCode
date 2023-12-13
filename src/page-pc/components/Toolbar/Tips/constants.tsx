@@ -2,7 +2,7 @@ import { robot, info, link, record, search, play, store, locale } from './Icons'
 
 export interface Opt {
   name?: string;
-  keys?: (string | React.JSX.Element)[];
+  keys?: (string | JSX.Element)[];
 }
 
 export const infoList: Opt[] = [
