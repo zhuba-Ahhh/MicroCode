@@ -1,18 +1,18 @@
-import { Divider, Modal, Popover } from 'antd'
-import React, { type FC, memo, useState } from 'react'
+import { Divider, Modal, Popover } from 'antd';
+import React, { type FC, memo, useState } from 'react';
 
-import { uuid } from '../../../../tools'
-import { infoList, type Opt, optList } from './constants'
-import { keyIcon } from './Icons'
-import css from './index.less'
+import { uuid } from '../../../../tools';
+import { infoList, type Opt, optList } from './constants';
+import { keyIcon } from './Icons';
+import css from './index.less';
 
 interface TipsProps {
-  opt?: Opt[]
-  info?: Opt[]
+  opt?: Opt[];
+  info?: Opt[];
 }
 
 const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
-  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
   const listItemRender = (list: Opt[], itemStyle: string) => {
     return (
@@ -33,8 +33,8 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
             </div>
           ))}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div>
@@ -46,7 +46,7 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
         >
           <div
             onClick={() => {
-              setIsInfoModalOpen(true)
+              setIsInfoModalOpen(true);
             }}
             className={css.item}
           >
@@ -59,7 +59,7 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
         title="快捷键和常规操作"
         footer={null}
         onCancel={() => {
-          setIsInfoModalOpen(false)
+          setIsInfoModalOpen(false);
         }}
         width={1060}
       >
@@ -70,7 +70,7 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
         </div>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-export default memo(Tips)
+export default memo(Tips);

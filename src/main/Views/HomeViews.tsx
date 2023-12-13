@@ -1,4 +1,4 @@
-import React, { type FC } from 'react'
+import React, { type FC } from 'react';
 
 const HomeViews: FC = () => {
   return (
@@ -24,7 +24,7 @@ const HomeViews: FC = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default HomeViews
+export default HomeViews;

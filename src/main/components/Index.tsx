@@ -1,6 +1,6 @@
-import './index.less'
+import './index.less';
 
-import React, { type FC } from 'react'
+import React, { type FC } from 'react';
 
 const Index: FC = () => {
   return (
@@ -26,7 +26,7 @@ const Index: FC = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

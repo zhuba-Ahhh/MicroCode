@@ -1,9 +1,9 @@
-// eslint-disable-next-line react/no-deprecated
-import { render } from 'react-dom';
-
 //连接器运行时
 import { mock } from '@mybricks/plugin-connector-http';
 import React from 'react';
+import { render } from 'react-dom';
+
+import events from './page-pc/configs/comEvents';
 
 //引擎发布导出的JSON数据，这里是从localStorage中获取
 let json = localStorage.getItem('--preview--');
@@ -41,19 +41,7 @@ function Page() {
           getQuery() {
             return {};
           },
-          events: [
-            //配置事件
-            {
-              type: 'jump',
-              title: '跳转到',
-              exe({ options }) {
-                const page = options.page;
-                if (page) {
-                  window.location.href = page;
-                }
-              }
-            }
-          ]
+          events
         }
       })}
     </div>
