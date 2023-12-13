@@ -1,15 +1,15 @@
 import React from 'react';
-import File from './Icons/FileIcon.svg';
-import Key from './Icons/keyIcon.svg';
-import Opt from './Icons/optIcon.svg';
-import Robot from './icons/robot.svg';
-import Link from './icons/link.svg';
-import Record from './icons/record.svg';
-import Search from './icons/search.svg';
-import Play from './icons/play.svg';
-import Store from './icons/store.svg';
-import Locale from './icons/locale.svg';
-import Info from './icons/info.svg';
+import File from './Svg/FileIcon.svg';
+import Key from './Svg/keyIcon.svg';
+import Opt from './Svg/optIcon.svg';
+import Robot from './Svg/robot.svg';
+import Link from './Svg/link.svg';
+import Record from './Svg/record.svg';
+import Search from './Svg/search.svg';
+import Play from './Svg/play.svg';
+import Store from './Svg/store.svg';
+import Locale from './Svg/locale.svg';
+import Info from './Svg/info.svg';
 
 //文档图标
 export const FileIcon = <File />;
