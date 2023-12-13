@@ -1,8 +1,8 @@
-import React, { memo, useEffect, useCallback } from 'react';
+import React, { memo, FC, useEffect, useCallback } from 'react';
 import { Switch } from 'antd';
+import Tips from './Tips';
 import css from './Toolbar.less';
 import { useDataJSON } from '../../types';
-import { Tips } from './Tips';
 import SaveLoadingSvg from '../../svg/saveLoading.svg';
 
 export interface ToolBarProps {
@@ -17,7 +17,7 @@ export interface ToolBarProps {
   setUserDataJSON: React.Dispatch<React.SetStateAction<useDataJSON>>;
 }
 
-const ToolBar: React.FC<ToolBarProps> = ({
+const ToolBar: FC<ToolBarProps> = ({
   save,
   clear,
   onSave,

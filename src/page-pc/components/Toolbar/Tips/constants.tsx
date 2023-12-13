@@ -1,15 +1,11 @@
 import { robot, info, link, record, search, play, store, locale } from './Icons';
 
-// import robot from './icons/robot.svg';
-// import link from './icons/link.svg';
-// import record from './icons/record.svg';
-// import search from './icons/search.svg';
-// import play from './icons/play.svg';
-// import store from './icons/store.svg';
-// import locale from './icons/locale.svg';
-// import info from './icons/info.svg';
+export interface Opt {
+  name?: string;
+  keys?: (string | React.JSX.Element)[];
+}
 
-export const infoList = [
+export const infoList: Opt[] = [
   {
     name: '保存',
     keys: ['⌘', 'S', '/', 'Control', 'S', '/', 'Ctrl', 'S']
@@ -44,7 +40,7 @@ export const infoList = [
   }
 ];
 
-export const optList = [
+export const optList: Opt[] = [
   {
     name: '唤起AI客服',
     keys: [`页面右下角AI图标`, robot]
