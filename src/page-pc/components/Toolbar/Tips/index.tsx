@@ -1,5 +1,5 @@
 import { Divider, Modal, Popover } from 'antd';
-import React, { type FC, memo, useState } from 'react';
+import React, { type FC, memo, useCallback, useState } from 'react';
 
 import { uuid } from '../../../../tools';
 import { infoList, type Opt, optList } from './constants';
@@ -14,7 +14,7 @@ interface TipsProps {
 const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
-  const listItemRender = (list: Opt[], itemStyle: string) => {
+  const listItemRender = useCallback((list: Opt[], itemStyle: string) => {
     return (
       <div className={itemStyle === 'info' ? css.infoItem : css.optItem}>
         {list.length > 0 &&
@@ -34,7 +34,7 @@ const Tips: FC<TipsProps> = ({ opt = optList, info = infoList }: TipsProps) => {
           ))}
       </div>
     );
-  };
+  }, []);
 
   return (
     <div>

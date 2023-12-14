@@ -2,22 +2,18 @@
   "name": "micro-code",
   "version": "1.0.0",
   "description": "SPA designer engine",
-  "main": "index.min.js",
-  "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --config ./scripts/webpack.dev.js",
-    "build": "rm -rf 'dist' && NODE_ENV=production webpack --config ./scripts/webpack.dev.js",
-    "prepare": "husky install"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zhuba-Ahhh/MicroCode"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
-  "author": "Rush",
   "license": "MIT",
+  "author": "Rush",
+  "main": "index.min.js",
+  "scripts": {
+    "build": "rm -rf 'dist' && NODE_ENV=production webpack --config ./scripts/webpack.dev.js",
+    "dev": "NODE_ENV=development webpack-dev-server --config ./scripts/webpack.dev.js",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "@mybricks/plugin-connector-http": "^1.1.50",
     "@mybricks/plugin-tools": "^1.0.17",
@@ -53,5 +49,9 @@
     "webpack-dev-server": "^4.9.3",
     "webpack-merge": "^5.8.0",
     "webpackbar": "^5.0.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
