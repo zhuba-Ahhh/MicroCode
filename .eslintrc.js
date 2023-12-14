@@ -6,10 +6,6 @@ module.exports = {
     require.resolve('prefer-code-style/eslint/browser'),
     require.resolve('prefer-code-style/eslint/typescript')
   ],
-  rules: {
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-explicit-any': ['off']
-  },
   overrides: [
     {
       files: TYPESCRIPT_FILES,
