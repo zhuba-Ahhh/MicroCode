@@ -1,5 +1,5 @@
 declare module '*.less' {
-  const classes: { [key: string]: string };
+  const classes: Record<string, string>;
   export default classes;
 }
 
@@ -9,7 +9,8 @@ declare module '*.html' {
 }
 
 declare module '*.svg' {
-  import ReactNode from 'react';
+  import type ReactNode from 'react';
+
   const content: ReactNode;
   export default content;
 }
