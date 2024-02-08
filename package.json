@@ -10,8 +10,8 @@
   "author": "Rush",
   "main": "index.min.js",
   "scripts": {
-    "build": "rm -rf 'dist' && NODE_ENV=production webpack --config ./scripts/webpack.dev.js",
-    "dev": "NODE_ENV=development webpack-dev-server --config ./scripts/webpack.dev.js",
+    "build": "webpack --config ./scripts/webpack.dev.js",
+    "dev": "webpack-dev-server --config ./scripts/webpack.dev.js",
     "prepare": "husky install"
   },
   "dependencies": {
