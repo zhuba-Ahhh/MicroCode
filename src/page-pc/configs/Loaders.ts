@@ -4,9 +4,9 @@ export default (projectJson: string) => ({
     return new Promise<string[]>((resolve) => {
       resolve([
         // PC通用组件库（提供了包括表单容器、表格、卡片等等常用的组件）
-        `https://assets.mybricks.world/comlibs/mybricks.normal-pc/1.4.78/2024-01-09_10-49-36/edit.js`,
+        `https://assets.mybricks.world/comlibs/mybricks.normal-pc/1.5.14/2024-02-26_21-29-26/edit.js`,
         // 基础组件库（提供了基础的组件，如：文本、形状、JS计算、类型转换等）
-        `https://assets.mybricks.world/comlibs/mybricks.basic-comlib/1.1.4/2023-12-27_16-07-46/edit.js`,
+        `https://assets.mybricks.world/comlibs/mybricks.basic-comlib/1.1.14/2024-02-26_14-21-16/edit.js`,
         // 图表组件库
         `https://f2.eckwai.com/kos/nlav12333/fangzhou/pub/comlibs/1047_1.0.10/2023-08-31_21-24-51/edit.js`,
         // 拓展组件库
