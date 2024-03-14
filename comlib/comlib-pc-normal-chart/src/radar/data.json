@@ -1,0 +1,18 @@
+{
+  "height": 400,
+  "config": {
+    "xField": "year",
+    "yField": "value",
+    "xAxis": {},
+    "yAxis": {},
+    "legend": {
+      "position": "top-left"
+    },
+    "area": {},
+    "seriesField": "",
+    "label": false,
+    "padding": "auto"
+  },
+  "useEmpty": true,
+  "emptyText": "暂无数据"
+}

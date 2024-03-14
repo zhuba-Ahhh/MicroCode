@@ -1,0 +1,36 @@
+{
+  "title": "饼图",
+  "namespace": "mybricks.normal-pc-chart.pie",
+  "version": "1.0.5",
+  "description": "饼图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "数据字段名",
+              "type": "number"
+            },
+            "seriesField": {
+              "title": "分组字段名",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": []
+}

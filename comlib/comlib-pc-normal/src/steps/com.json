@@ -1,0 +1,143 @@
+{
+  "title": "步骤条",
+  "namespace": "mybricks.normal-pc.steps",
+  "version": "1.0.20",
+  "description": "步骤条",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor",
+  "upgrade": "./upgrade.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "inputs": [
+    {
+      "id": "nextStep",
+      "title": "显示下一步",
+      "schema": {
+        "type": "any"
+      },
+      "rels": ["nextStepComplete"]
+    },
+    {
+      "id": "prevStep",
+      "title": "显示上一步",
+      "schema": {
+        "type": "any"
+      },
+      "rels": ["prevStepComplete"]
+    },
+    {
+      "id": "jumpTo",
+      "title": "跳转",
+      "schema": {
+        "type": "number"
+      },
+      "rels": ["jumpToComplete"]
+    },
+    {
+      "id": "getIndex",
+      "title": "获取当前步骤",
+      "desc": "步骤从0开始计数",
+      "rels": [
+        "getIndex"
+      ],
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "setHideSteps",
+      "title": "设置隐藏步骤",
+      "desc": "步骤从0开始计数",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "rels": ["setHideStepsComplete"]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "submit",
+      "title": "数据提交",
+      "schema": {
+        "type": "follow"
+      }
+    },
+    {
+      "id": "step0",
+      "title": "步骤1下一步",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "getIndex",
+      "title": "当前步骤",
+      "schema": {
+        "type": "number"
+      }
+    },
+    {
+      "id": "step0_into",
+      "title": "步骤1显示",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "step0_leave",
+      "title": "步骤1隐藏",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "step0_click",
+      "title": "步骤1点击时",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "nextStepComplete",
+      "title": "完成",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "prevStepComplete",
+      "title": "完成",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "jumpToComplete",
+      "title": "完成",
+      "schema": {
+        "type": "number"
+      }
+    },
+    {
+      "id": "setHideStepsComplete",
+      "title": "完成",
+      "schema": {
+        "type": "any"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "step0",
+      "title": "步骤1"
+    }
+  ]
+}

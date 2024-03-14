@@ -1,0 +1,78 @@
+{
+  "debugger": "pc-spa",
+  "componentType": "PC",
+  "fileId": 1047,
+  "commitInfo": "update",
+  "namespace": "mybricks.normal-pc-chart",
+  "comAry": {
+    "test": [
+      {
+        "title": "基础",
+        "comAry": [
+          "./src/column/com.json",
+          "./src/line/com.json",
+          "./src/area/com.json",
+          "./src/dualAxes/com.json",
+          "./src/radar/com.json",
+          "./src/liquid/com.json",
+          "./src/heatmap/com.json",
+          "./src/pie/com.json",
+          "./src/bar/com.json",
+          "./src/bidirectionalBar/com.json",
+          "./src/funnel/com.json",
+          "./src/organization/com.json"
+        ]
+      },
+      {
+        "title": "迷你图",
+        "comAry": [
+          "./src/tinyColumn/com.json",
+          "./src/tinyArea/com.json",
+          "./src/tinyProgress/com.json",
+          "./src/ringProgress/com.json"
+        ]
+      },
+      {
+        "title": "高级",
+        "comAry": [
+          "./src/charts/com.json"
+        ]
+      }
+    ],
+    "publish": [
+      {
+        "title": "基础",
+        "comAry": [
+          "./src/column/com.json",
+          "./src/line/com.json",
+          "./src/area/com.json",
+          "./src/dualAxes/com.json",
+          "./src/radar/com.json",
+          "./src/liquid/com.json",
+          "./src/heatmap/com.json",
+          "./src/pie/com.json",
+          "./src/bar/com.json",
+          "./src/bidirectionalBar/com.json",
+          "./src/funnel/com.json",
+          "./src/organization/com.json"
+        ]
+      },
+      {
+        "title": "迷你图",
+        "comAry": [
+          "./src/tinyColumn/com.json",
+          "./src/tinyArea/com.json",
+          "./src/tinyProgress/com.json",
+          "./src/ringProgress/com.json"
+        ]
+      },
+      {
+        "title": "高级",
+        "comAry": [
+          "./src/charts/com.json"
+        ]
+      }
+    ]
+  },
+  "tags": "react"
+}

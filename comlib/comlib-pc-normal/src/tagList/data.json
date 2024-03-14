@@ -1,0 +1,25 @@
+{
+  "align": "start",
+  "direction": "horizontal",
+  "wrap": true,
+  "type": "default",
+  "tags": [
+    {
+      "key": "tag1",
+      "content": "tag",
+      "color": "default"
+    }
+  ],
+  "isEllipsis": false,
+  "ellipsis": {
+    "maxWidth": 120
+  },
+  "closeAble": false,
+  "tagSize": "small-tag",
+  "dynamic": false,
+  "appendBtn": {
+    "text": "新增",
+    "icon": "PlusOutlined"
+  },
+  "useAppendBtn": true
+}

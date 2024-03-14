@@ -1,0 +1,32 @@
+{
+  "title": "栅格布局",
+  "namespace": "mybricks.normal-pc.grid",
+  "visibility": false,
+  "version": "1.0.17",
+  "description": "24 栅格系统",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors/index.ts",
+  "upgrade": "./upgrade.ts",
+  "ai": "./ai/index.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "slots": [
+    {
+      "id": "slot_0",
+      "title": "col-8"
+    },
+    {
+      "id": "slot_1",
+      "title": "col-8"
+    },
+    {
+      "id": "slot_2",
+      "title": "自适应"
+    }
+  ]
+}

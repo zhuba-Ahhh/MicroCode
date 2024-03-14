@@ -1,0 +1,74 @@
+{
+  "title": "抽屉",
+  "enable": true,
+  "visibility": false,
+  "namespace": "mybricks.normal-pc.drawer",
+  "version": "1.0.5",
+  "description": "抽屉从父窗体边缘滑入，覆盖住部分父窗体内容。用户在抽屉内操作时不必离开当前任务，操作完成后，可以平滑地回到原任务。",
+  "author": "ZhuLin",
+  "author_name": "朱琳",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "inputs": [
+    {
+      "id": "close",
+      "title": "关闭",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "open",
+      "title": "打开",
+      "schema": {
+        "type": "follow"
+      }
+    },
+    {
+      "id": "title",
+      "title": "修改标题",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "outputs": [],
+  "slots": [
+    {
+      "id": "content",
+      "title": "抽屉容器",
+      "type": "scope",
+      "inputs": [
+        {
+          "id": "dataSource",
+          "title": "输入数据",
+          "schema": {
+            "type": "any"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ok",
+          "title": "确认",
+          "schema": {
+            "type": "follow"
+          }
+        },
+        {
+          "id": "cancel",
+          "title": "取消",
+          "schema": {
+            "type": "follow"
+          }
+        }
+      ]
+    }
+  ],
+  "rtType": "popup"
+}

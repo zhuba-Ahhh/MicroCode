@@ -1,0 +1,15 @@
+node_modules
+package-lock.json
+
+.temp
+.temp-pub
+.vscode
+.DS_Store
+.history
+
+yarn.lock
+.idea/
+
+cypress/screenshots
+cypress-visual-report
+cypress-visual-screenshots

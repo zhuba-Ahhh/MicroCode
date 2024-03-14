@@ -1,0 +1,67 @@
+{
+  "rowKey": "",
+  "dataSource": [],
+  "columns": [],
+  "fixedHeader": false,
+  "enableStripe": false,
+  "headStyle": {
+    "color": "#1f1f1f",
+    "background": "#f5f7f9"
+  },
+  "contentStyle": {},
+  "scroll": {
+    "y": "",
+    "scrollToFirstRowOnChange": true
+  },
+  "bordered": false,
+  "size": "small",
+  "useRowSelection": false,
+  "enableRowClickSelection": false,
+  "rowSelectionPostion": [
+    "top",
+    "bottom"
+  ],
+  "useLoading": true,
+  "tableLayout": "fixed",
+  "loadingTip": "",
+  "usePagination": false,
+  "paginationConfig": {
+    "total": 20,
+    "text": "共 {total} 条结果",
+    "current": 1,
+    "currentPage": {
+      "pageNum": 1,
+      "pageSize": 10
+    },
+    "isDynamic": false,
+    "disabled": false,
+    "defaultPageSize": 10,
+    "align": "flex-end",
+    "size": "default",
+    "showSizeChanger": false,
+    "pageSizeOptions": [
+      "10",
+      "20",
+      "50",
+      "100"
+    ],
+    "showQuickJumper": false,
+    "hideOnSinglePage": false,
+    "useDynamicTitle": false
+  },
+  "domainModel": {},
+  "useSummaryColumn": false,
+  "summaryColumnTitle": "合计",
+  "summaryCellTitleCol": 1,
+  "summaryColumnContentType": "text",
+  "summaryColumnContentSchema": {
+    "type": "string"
+  },
+  "mergeCheckboxColumn": false,
+  "isEmpty": false,
+  "description": "暂无数据",
+  "enableOnRow": false,
+  "onRowScript": "",
+  "lazyLoad": false,
+  "filterIconDefault": "FilterFilled"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "迷你进度图",
+  "namespace": "mybricks.normal-pc-chart.tinyProgress",
+  "version": "1.0.1",
+  "description": "迷你进度图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "type": "number"
+      }
+    }
+  ],
+  "outputs": []
+}

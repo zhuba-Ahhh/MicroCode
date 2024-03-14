@@ -1,0 +1,28 @@
+{
+  "title": "水波图",
+  "namespace": "mybricks.normal-pc-chart.liquid",
+  "version": "1.0.2",
+  "description": "水波图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "percent": {
+            "type":"number"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": []
+}

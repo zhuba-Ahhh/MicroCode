@@ -1,0 +1,122 @@
+{
+  "title": "数据表格",
+  "namespace": "mybricks.normal-pc.table",
+  "version": "1.1.44",
+  "description": "数据表格",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.png",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors/index.tsx",
+  "ai": "./ai.ts",
+  "upgrade": "./upgrade.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "schema": [
+    "mybricks.domain-pc.crud/table",
+    "*"
+  ],
+  "inputs": [
+    {
+      "id": "dataSource",
+      "title": "设置数据源",
+      "schema": {
+        "type": "array"
+      },
+      "rels": [
+        "dataSource"
+      ],
+      "desc": "设置表格数据"
+    },
+    {
+      "id": "getTableData",
+      "title": "获取表格数据",
+      "schema": {
+        "type": "any"
+      },
+      "rels": [
+        "getTableData"
+      ],
+      "desc": "获取表格数据并输出"
+    },
+    {
+      "id": "startLoading",
+      "title": "开启loading",
+      "schema": {
+        "type": "any"
+      },
+      "rels": [
+        "startLoading"
+      ],
+      "desc": "设置表格为loading状态"
+    },
+    {
+      "id": "endLoading",
+      "title": "关闭loading",
+      "schema": {
+        "type": "any"
+      },
+      "rels": [
+        "endLoading"
+      ],
+      "desc": "关闭表格loading状态"
+    },
+    {
+      "id": "setSize",
+      "title": "设置布局风格",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setSizeDone"
+      ],
+      "desc": "有三种布局风格: large | middle | small"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "getTableData",
+      "title": "表格数据",
+      "schema": {
+        "type": "array"
+      }
+    },
+    {
+      "id": "columnsChange",
+      "title": "列结构变化",
+      "schema": {
+        "type": "array"
+      }
+    },
+    {
+      "id": "dataSource",
+      "title": "数据源",
+      "schema": {
+        "type": "array"
+      }
+    },
+    {
+      "id": "startLoading",
+      "title": "开启loading后",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "endLoading",
+      "title": "关闭loading后",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "setSizeDone",
+      "title": "设置布局风格完成",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ]
+}

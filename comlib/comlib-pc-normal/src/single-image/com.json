@@ -1,0 +1,44 @@
+{
+  "title": "图片",
+  "namespace": "mybricks.normal-pc.single-image",
+  "version": "1.0.9",
+  "description": "可预览的单图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "upgrade": "./upgrade.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "inputs": [
+    {
+      "id": "setImgSrc",
+      "title": "图片地址",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setImgSrcDone"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "click",
+      "title": "单击图片",
+      "scheme": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "setImgSrcDone",
+      "title": "设置地址完成",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ]
+}

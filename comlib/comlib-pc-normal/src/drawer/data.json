@@ -1,0 +1,35 @@
+{
+  "title": "标题",
+  "position": "right",
+  "closable": true,
+  "showMask": true,
+  "visible": false,
+  "width": 720,
+  "height": 200,
+  "useFooter": false,
+  "footerAlign": "flex-end",
+  "showFull": false,
+  "bodyStyle": {
+    "backgroundColor": ""
+  },
+  "footerBtns": [
+    {
+      "id": "cancel",
+      "title": "取消",
+      "icon": "",
+      "useIcon": false,
+      "showText": true,
+      "type": "default",
+      "isConnected": false
+    },
+    {
+      "id": "ok",
+      "title": "确认",
+      "type": "primary",
+      "icon": "",
+      "useIcon": false,
+      "showText": true,
+      "isConnected": false
+    }
+  ]
+}

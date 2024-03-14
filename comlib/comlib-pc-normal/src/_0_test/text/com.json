@@ -1,0 +1,33 @@
+{
+  "title": "测试--文本",
+  "namespace": "test.text",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "version": "1.0.0",
+  "description": "schema为*",
+  "runtime": "./runtime.tsx",
+  "inputs": [
+    {
+      "id": "test",
+      "title": "TestInput",
+      "rels": [
+        "testOut"
+      ],
+      "schema": {
+        "type": "follow"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "testOut",
+      "title": "测试输出",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "schema": [
+    "*"
+  ]
+}

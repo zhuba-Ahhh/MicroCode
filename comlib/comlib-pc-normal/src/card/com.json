@@ -1,0 +1,44 @@
+{
+  "title": "卡片",
+  "namespace": "mybricks.normal-pc.card",
+  "version": "1.0.19",
+  "description": "卡片",
+  "author": "HuangQiuyun",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "upgrade": "./upgrade.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "inputs": [
+    {
+      "id": "title",
+      "title": "标题",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setTitleDone"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "setTitleDone",
+      "title": "设置标题完成",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "body",
+      "title": "卡片内容容器",
+      "layout": "smart"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "visible": true,
+  "rules": [],
+  "validateTrigger": [
+    "onBlur",
+    "onPressEnter"
+  ],
+  "config": {
+    "allowClear": true,
+    "placeholder": "请输入内容",
+    "disabled": false,
+    "addonBefore": "",
+    "addonAfter": "",
+    "showCount": false,
+    "maxLength": -1,
+    "size": "small"
+  },
+  "src": false,
+  "innerIcon": "HomeOutlined",
+  "isEditable": true
+}

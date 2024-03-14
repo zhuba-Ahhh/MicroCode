@@ -1,0 +1,10 @@
+{
+  "placeholder": "请选择时间",
+  "rules": [],
+  "format": "timeStamp",
+  "customFormat": "HH:mm:ss",
+  "isEditable": true,
+  "config": {
+    "size": "small"
+  }
+}

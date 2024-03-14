@@ -1,0 +1,100 @@
+{
+  "title": "逻辑表单",
+  "namespace": "mybricks.pro-pc.logic-form",
+  "version": "1.0.0",
+  "description": "逻辑表单",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.ts",
+  "inputs": [
+    {
+      "id": "setLogicConditions",
+      "title": "输入逻辑条件描述",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "fieldId": {
+            "type": "string"
+          },
+          "fieldName": {
+            "type": "string"
+          },
+          "whereJoiner": {
+            "type": "enum",
+            "enumValues": ["AND", "OR"]
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fieldId": {
+                  "type": "string"
+                },
+                "fieldName": {
+                  "type": "string"
+                },
+                "whereJoiner": {
+                  "type": "enum",
+                  "enumValues": [
+                    "AND",
+                    "OR"
+                  ]
+                },
+                "operator": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "desc": "输入符合定义的逻辑条件描述"
+    },
+    {
+      "id": "setFields",
+      "title": "设置表单可选字段及类型",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "type": "enum",
+              "enumValues": ["string", "number"]
+            }
+          }
+        }
+      },
+      "desc": "设置逻辑表单可选字段及类型"
+    },
+    {
+      "id": "submit",
+      "title": "提交表单",
+      "rels": [
+        "onFinishForRels"
+      ],
+      "schema": {
+        "type": "any"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "onFinishForRels",
+      "title": "提交数据输出",
+      "schema": {
+        "type": "object"
+      }
+    }
+  ]
+}

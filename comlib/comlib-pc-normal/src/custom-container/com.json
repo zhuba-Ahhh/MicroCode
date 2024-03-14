@@ -1,0 +1,64 @@
+{
+  "title": "自定义容器",
+  "namespace": "mybricks.normal-pc.custom-container",
+  "version": "1.0.27",
+  "description": "自定义容器",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.ts",
+  "upgrade": "./upgrade.ts",
+  "slots": [
+    {
+      "id": "content",
+      "title": "内容",
+      "layout": "smart"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "setStyle",
+      "title": "动态设置样式",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "background": {
+            "type": "string"
+          }
+        }
+      },
+      "rels": [
+        "setStyleComplete"
+      ]
+    },
+    {
+      "id": "scrollTo",
+      "title": "滚动到",
+      "schema": {
+        "type": "number"
+      },
+      "rels": [
+        "scrollComplete"
+      ],
+      "desc": "使得自定义容器内部滚动到指定位置,传递非数字滚动到底部"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "setStyleComplete",
+      "title": "完成",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "scrollComplete",
+      "title": "完成",
+      "schema": {
+        "type": "any"
+      }
+    }
+  ]
+}

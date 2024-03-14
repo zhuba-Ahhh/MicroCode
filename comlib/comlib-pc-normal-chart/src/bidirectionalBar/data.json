@@ -1,0 +1,17 @@
+{
+  "height": 400,
+  "config": {
+    "xAxis": {
+      "position": "bottom"
+    },
+    "layout": "horizontal",
+    "yAxis": {},
+    "legend": {},
+    "label": false,
+    "xField": "xField",
+    "yField": ["yField0", "yField1"],
+    "padding": "auto"
+  },
+  "useEmpty": true,
+  "emptyText": "暂无数据"
+}

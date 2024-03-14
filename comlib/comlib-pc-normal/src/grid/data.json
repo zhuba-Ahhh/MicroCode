@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "key": "row_0",
+      "justify": "start",
+      "align": "stretch",
+      "gutter": [
+        0,
+        0
+      ],
+      "wrap": true,
+      "columns": [
+        {
+          "span": 8,
+          "key": "column_0",
+          "slot": "slot_0",
+          "widthOption": "span",
+          "width": 300,
+          "flex": 1,
+          "legacyStyle": {
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "slotStyle": {
+            "display": "flex",
+            "position": "inherit",
+            "flexDirection": "column",
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start",
+            "flexWrap": "nowrap"
+          }
+        },
+        {
+          "span": 8,
+          "key": "column_1",
+          "slot": "slot_1",
+          "widthOption": "span",
+          "width": 300,
+          "flex": 1,
+          "legacyStyle": {
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "slotStyle": {
+            "display": "flex",
+            "position": "inherit",
+            "flexDirection": "column",
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start",
+            "flexWrap": "nowrap"
+          }
+        },
+        {
+          "span": 8,
+          "key": "column_2",
+          "slot": "slot_2",
+          "widthOption": "auto",
+          "width": 300,
+          "flex": 1,
+          "legacyStyle": {
+            "overflowX": "hidden",
+            "overflowY": "hidden"
+          },
+          "slotStyle": {
+            "display": "flex",
+            "position": "inherit",
+            "flexDirection": "column",
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start",
+            "flexWrap": "nowrap"
+          }
+        }
+      ]
+    }
+  ],
+  "style": {},
+  "widthUnit": "%"
+}

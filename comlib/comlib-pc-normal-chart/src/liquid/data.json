@@ -1,0 +1,23 @@
+{
+  "height": 400,
+  "config": {
+    "xAxis": {},
+    "yAxis": {},
+    "legend": {
+      "position": "top-left"
+    },
+    "liquidStyle": {
+      "fill": "blue",
+      "stroke": "blue"
+    },
+    "outline": { 
+      "border": 4,
+      "distance": 8
+    },
+    "percent": 0.25,
+    "radius": 1,
+    "padding": "auto"
+  },
+  "useEmpty": true,
+  "emptyText": "暂无数据"
+}

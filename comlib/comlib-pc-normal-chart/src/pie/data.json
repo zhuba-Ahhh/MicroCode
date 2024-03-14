@@ -1,0 +1,18 @@
+{
+  "height": 400,
+  "config": {
+    "xAxis": {},
+    "yAxis": {},
+    "legend": {
+      "position": "top-left"
+    },
+    "angleField": "value",
+    "colorField": "type",
+    "radius": 1,
+    "label": {},
+    "padding": "auto"
+  },
+  "subType": "default",
+  "useEmpty": true,
+  "emptyText": "暂无数据"
+}

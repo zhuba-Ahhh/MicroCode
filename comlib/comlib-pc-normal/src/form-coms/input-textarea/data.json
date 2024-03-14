@@ -1,0 +1,15 @@
+{
+  "visible": true,
+  "rules": [],
+  "config": {
+    "allowClear": true,
+    "placeholder": "请输入内容",
+    "disabled": false,
+    "showCount": false,
+    "maxLength": -1,
+    "size": "small"
+  },
+  "minRows": 3,
+  "maxRows": 6,
+  "isEditable": true
+}

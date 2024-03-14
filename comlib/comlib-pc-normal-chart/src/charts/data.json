@@ -1,0 +1,25 @@
+{
+  "type": "Line",
+  "config": {
+    "height": 400,
+    "xField": "label",
+    "yField": "value",
+    "colorField": "type",
+    "angleField": "value",
+    "legend": {
+      "position": "right"
+    },
+    "label": false,
+    "tooltip": {},
+    "seriesField": "type",
+    "smooth": false
+  },
+  "tooltipFormatterFn": {
+    "visible": false,
+    "content": ""
+  },
+  "lineStyleFn": {
+    "visible": false,
+    "content": ""
+  }
+}

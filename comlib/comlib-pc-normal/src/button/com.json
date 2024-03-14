@@ -1,0 +1,69 @@
+{
+  "title": "按钮",
+  "namespace": "mybricks.normal-pc.custom-button",
+  "version": "1.0.23",
+  "description": "按钮",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor/index.tsx",
+  "upgrade": "./upgrade.ts",
+  "ai": "./ai.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "inputs": [
+    {
+      "id": "dynamicTitle",
+      "title": "设置标题",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setDynamicTitleDone"
+      ]
+    },
+    {
+      "id": "dynamicDisabled",
+      "title": "设置禁用",
+      "schema": {
+        "type": "boolean"
+      },
+      "rels": [
+        "setDynamicDisabledDone"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "click",
+      "title": "单击",
+      "schema": {
+        "type": "number"
+      }
+    },
+    {
+      "id": "dbClick",
+      "title": "双击",
+      "schema": {
+        "type": "number"
+      }
+    },
+    {
+      "id": "setDynamicTitleDone",
+      "title": "设置标题完成",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "dynamicDisabled",
+      "title": "设置禁用完成",
+      "schema": {
+        "type": "boolean"
+      }
+    }
+  ]
+}
