@@ -1,0 +1,57 @@
+{
+  "useLoading": false,
+  "loadingTip": "Loading...",
+  "grid": {
+    "column": 3,
+    "mobileColumn": 1,
+    "gutter": [
+      0,
+      16
+    ]
+  },
+  "isAuto": true,
+  "isCustom": false,
+  "isScroll": false,
+  "space": [
+    0,
+    16
+  ],
+  "rowKey": "",
+  "layout": "vertical",
+  "isResponsive": false,
+  "bootstrap": [1,2,4,4,6,3],
+  "itemWidth": "100%",
+  "isCustomPoints": false,
+  "customOptions":[
+    {
+      "point": 576,
+      "relation": "<",
+      "columns": 1
+    },
+    {
+      "point": 576,
+      "relation": "≥",
+      "columns": 2
+    },
+    {
+      "point": 768,
+      "relation": "≥",
+      "columns": 4
+    },
+    {
+      "point": 992,
+      "relation": "≥",
+      "columns": 4
+    },
+    {
+      "point": 1200,
+      "relation": "≥",
+      "columns": 6
+    },
+    {
+      "point": 1600,
+      "relation": "≥",
+      "columns": 3
+    }
+  ]
+}

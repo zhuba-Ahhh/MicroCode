@@ -1,0 +1,34 @@
+.datePicker {
+  :global {
+    .ant-picker {
+      width: 100%;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner:before {
+      z-index: -1;
+    }
+  }
+}
+
+.slotContainer {
+  :global {
+    .ant-picker-cell .ant-picker-cell-inner {
+      min-height: 45px;
+    }
+
+    .ant-picker-cell-disabled:before {
+      top: 40%;
+      height: 80%;
+    }
+  }
+}
+
+.displayWeek {
+  :global {
+    td.ant-picker-cell.ant-picker-cell-week {
+      display: none;
+    }
+    th[aria-label='empty cell'] {
+      display: none;
+    }
+  }
+}

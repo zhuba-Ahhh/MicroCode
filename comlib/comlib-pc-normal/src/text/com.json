@@ -1,0 +1,38 @@
+{
+  "title": "文本",
+  "namespace": "mybricks.normal-pc.text",
+  "version": "1.0.14",
+  "description": "文本",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "upgrade": "./upgrade.ts",
+  "ai": "./ai.ts",
+  "target": {
+    "toReact": "./toReact.ts"
+  },
+  "inputs": [
+    {
+      "id": "content",
+      "title": "内容",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setContentDone"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "setContentDone",
+      "title": "设置内容完成",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ]
+}

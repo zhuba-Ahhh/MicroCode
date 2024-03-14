@@ -1,0 +1,16 @@
+{
+  "percent": 50,
+  "type": "line",
+  "isShow": true,
+  "status": "normal",
+  "strokeColor": "#1890ff",
+  "isSteps": false,
+  "steps": 3,
+  "isColor": false,
+  "size": "small",
+  "circleSize": 120,
+  "strokeWidth": 6,
+  "trailColor": "f3f3f3",
+  "isFormat": false,
+  "formatFunction": "{percent}%"
+}

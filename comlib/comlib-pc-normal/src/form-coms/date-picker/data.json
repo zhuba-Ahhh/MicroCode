@@ -1,0 +1,19 @@
+{
+  "options": [],
+  "visible": true,
+  "rules": [],
+  "showTime": false,
+  "useCustomDateCell": false,
+  "contentType": "timeStamp",
+  "formatter": "YYYY-MM-DD HH:mm:ss 星期dd",
+  "config": {
+    "disabled": false,
+    "placeholder": "请选择日期",
+    "picker": "date",
+    "allowClear": true,
+    "size": "small"
+  },
+  "isWeekNumber": false,
+  "customExtraText": false,
+  "isEditable": true
+}

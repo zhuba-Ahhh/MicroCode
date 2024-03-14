@@ -1,0 +1,628 @@
+{
+  "title": "树",
+  "namespace": "mybricks.normal-pc.tree",
+  "version": "1.0.50",
+  "description": "树状图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "treeData",
+      "title": "输入数据",
+      "schema": {
+        "title": "树组件数据",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "标题",
+              "type": "string"
+            },
+            "key": {
+              "title": "字段名",
+              "type": "string"
+            },
+            "disableCheckbox": {
+              "title": "禁用勾选",
+              "type": "boolean"
+            },
+            "children": {
+              "title": "子项",
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      },
+      "rels": [
+        "setTreeDataDone"
+      ]
+    },
+    {
+      "id": "nodeData",
+      "title": "更新节点数据",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "children": {
+            "title": "子项",
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "rels": [
+        "setNodeDataDone"
+      ]
+    },
+    {
+      "id": "searchValue",
+      "title": "搜索",
+      "schema": {
+        "type": "string"
+      },
+      "desc": "输入字符串，高亮展示匹配的树节点",
+      "rels": [
+        "searchValueDone"
+      ]
+    },
+    {
+      "id": "filter",
+      "title": "过滤",
+      "schema": {
+        "type": "string"
+      },
+      "desc": "输入字符串，筛选匹配的树节点",
+      "rels": [
+        "filterDone"
+      ]
+    },
+    {
+      "id": "setSelectedKeys",
+      "title": "设置选中节点",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "desc": "输入节点key数组, 设置树形结构中选中的节点",
+      "rels": [
+        "setSelectedKeysDone"
+      ]
+    },
+    {
+      "id": "setExpandedKeys",
+      "title": "设置展开节点",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "desc": "输入节点key数组, 设置树形结构中展开的节点列表",
+      "rels": [
+        "setExpandedKeysDone"
+      ]
+    },
+    {
+      "id": "setOpenDepth",
+      "title": "设置展开深度",
+      "desc": "设置树的展开深度: 0表示全部折叠, -1表示全部展开",
+      "schema": {
+        "type": "number"
+      },
+      "rels": [
+        "setOpenDepthDone"
+      ]
+    },
+    {
+      "id": "setDragConfig",
+      "title": "设置拖拽功能",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "draggable": {
+            "type": "enum",
+            "items": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string",
+                "value": "custom"
+              }
+            ]
+          },
+          "draggableScript": {
+            "type": "string"
+          },
+          "allowDrop": {
+            "type": "enum",
+            "items": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string",
+                "value": "custom"
+              }
+            ]
+          },
+          "allowDropScript": {
+            "type": "string"
+          },
+          "useDropScope": {
+            "type": "enum",
+            "items": [
+              {
+                "type": "boolean",
+                "value": false
+              },
+              {
+                "type": "string",
+                "value": "parent"
+              }
+            ]
+          },
+          "dropScopeMessage": {
+            "type": "string"
+          }
+        }
+      },
+      "rels": [
+        "setDragConfigDone"
+      ]
+    },
+    {
+      "id": "getTreeData",
+      "title": "获取数据",
+      "desc": "获取树的当前数据并输出",
+      "schema": {
+        "type": "any"
+      },
+      "rels": [
+        "returnTreeData"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "onChange",
+      "title": "数据变化",
+      "schema": {
+        "title": "树组件数据",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "标题",
+              "type": "string"
+            },
+            "key": {
+              "title": "字段名",
+              "type": "string"
+            },
+            "children": {
+              "title": "子项",
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "returnTreeData",
+      "title": "数据输出",
+      "schema": {
+        "title": "树组件数据",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "标题",
+              "type": "string"
+            },
+            "key": {
+              "title": "字段名",
+              "type": "string"
+            },
+            "children": {
+              "title": "子项",
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "submit",
+      "title": "勾选项数据输出",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "id": "click",
+      "title": "节点选中事件",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "id": "addNodeDone",
+      "title": "添加完成",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "node": {
+            "type": "object",
+            "title": "新增节点数据",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              }
+            }
+          },
+          "parent": {
+            "type": "object",
+            "title": "新增节点的父节点数据"
+          }
+        }
+      }
+    },
+    {
+      "id": "modify",
+      "title": "修改",
+      "schema": {
+        "title": "节点数据",
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "标题",
+            "type": "string"
+          },
+          "key": {
+            "title": "字段名",
+            "type": "string"
+          },
+          "value": {
+            "title": "值",
+            "type": "string"
+          },
+          "disableCheckbox": {
+            "title": "禁用勾选",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "id": "delete",
+      "title": "删除",
+      "schema": {
+        "title": "节点数据",
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "标题",
+            "type": "string"
+          },
+          "key": {
+            "title": "字段名",
+            "type": "string"
+          },
+          "value": {
+            "title": "值",
+            "type": "string"
+          },
+          "disableCheckbox": {
+            "title": "禁用勾选",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "id": "onDropDone",
+      "title": "拖拽完成",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "dragNodeInfo": {
+            "title": "拖拽节点信息",
+            "type": "object",
+            "properties": {
+              "parent": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "title": "标题",
+                    "type": "string"
+                  },
+                  "key": {
+                    "title": "字段名",
+                    "type": "string"
+                  }
+                }
+              },
+              "node": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "title": "标题",
+                    "type": "string"
+                  },
+                  "key": {
+                    "title": "字段名",
+                    "type": "string"
+                  }
+                }
+              },
+              "index": {
+                "type": "number"
+              }
+            }
+          },
+          "dropNodeInfo": {
+            "title": "放置节点信息",
+            "type": "object",
+            "properties": {
+              "parent": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "title": "标题",
+                    "type": "string"
+                  },
+                  "key": {
+                    "title": "字段名",
+                    "type": "string"
+                  }
+                }
+              },
+              "node": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "title": "标题",
+                    "type": "string"
+                  },
+                  "key": {
+                    "title": "字段名",
+                    "type": "string"
+                  }
+                }
+              },
+              "index": {
+                "type": "number"
+              }
+            }
+          },
+          "flag": {
+            "title": "标识",
+            "type": "enum",
+            "items": [
+              {
+                "type": "number",
+                "value": 0
+              },
+              {
+                "type": "number",
+                "value": 1
+              },
+              {
+                "type": "number",
+                "value": -1
+              }
+            ]
+          },
+          "treeData": {
+            "title": "拖拽后的树组件数据",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "title": "标题",
+                  "type": "string"
+                },
+                "key": {
+                  "title": "字段名",
+                  "type": "string"
+                },
+                "children": {
+                  "title": "子项",
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "setTreeDataDone",
+      "title": "输入数据完成",
+      "schema": {
+        "title": "树组件数据",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "title": "标题",
+              "type": "string"
+            },
+            "key": {
+              "title": "字段名",
+              "type": "string"
+            },
+            "disableCheckbox": {
+              "title": "禁用勾选",
+              "type": "boolean"
+            },
+            "children": {
+              "title": "子项",
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "setNodeDataDone",
+      "title": "更新节点数据完成",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "children": {
+            "title": "子项",
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "searchValueDone",
+      "title": "搜索完成",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id": "filterDone",
+      "title": "过滤完成",
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "id":  "setSelectedKeysDone",
+      "title": "设置选中节点完成",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "id": "setExpandedKeysDone",
+      "title": "设置展开节点完成",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    {
+      "id": "setOpenDepthDone",
+      "title": "设置展开深度完成",
+      "schema": {
+        "type": "number"
+      }
+    },
+    {
+      "id": "setDragConfigDone",
+      "title": "设置拖拽功能完成",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "draggable": {
+            "type": "enum",
+            "items": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string",
+                "value": "custom"
+              }
+            ]
+          },
+          "draggableScript": {
+            "type": "string"
+          },
+          "allowDrop": {
+            "type": "enum",
+            "items": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "string",
+                "value": "custom"
+              }
+            ]
+          },
+          "allowDropScript": {
+            "type": "string"
+          },
+          "useDropScope": {
+            "type": "enum",
+            "items": [
+              {
+                "type": "boolean",
+                "value": false
+              },
+              {
+                "type": "string",
+                "value": "parent"
+              }
+            ]
+          },
+          "dropScopeMessage": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

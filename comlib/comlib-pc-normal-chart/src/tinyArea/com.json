@@ -1,0 +1,26 @@
+{
+  "title": "迷你面积图",
+  "namespace": "mybricks.normal-pc-chart.tinyArea",
+  "version": "1.0.1",
+  "description": "迷你面积图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      }
+    }
+  ],
+  "outputs": []
+}

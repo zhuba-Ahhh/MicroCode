@@ -1,0 +1,57 @@
+{
+  "height": 400,
+  "type": "Heatmap",
+  "useSubHeatMap": false,
+  "config": {
+    "type": "density",
+    "xField": "x",
+    "yField": "y",
+    "colorField": "density",
+    "xAxis": {
+      "min": 0, "max": 1000
+    },
+    "yAxis": {
+      "min": 0, "max": 500
+    },
+    "zAxis": {
+      "alias": ""
+    },  
+    "legend": {
+      "position": "bottom"
+    },
+    "label": {
+      "displayFields": [{"label": "密度值", "key": "density"}],
+      "style": {
+        "fontSize": 12
+      }
+    },
+    "size": 6,
+    "colors": ["#1890FF", "#F51D27"],
+    "interval": 1500,
+    "annotations": [
+      {
+        "type": "image",
+        "start": ["min", "max"],
+        "end": ["max", "min"],
+        "src": ""
+      }
+    ]
+  },
+  "subConfig": [
+    {
+      "size": 20,
+      "colors": [
+        "#12CCCC",
+        "#FFC838"
+      ],
+      "inputId": "extraData0",
+      "label": {
+        "displayFields": [{"label": "密度值", "key": "density"}],
+        "style": {
+          "fontSize": 12
+        }
+      }
+    }
+  ],
+  "subType": "default"
+}

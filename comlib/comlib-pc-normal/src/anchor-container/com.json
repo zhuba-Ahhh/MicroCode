@@ -1,0 +1,45 @@
+{
+  "title": "锚点容器",
+  "enable": true,
+  "visibility": true,
+  "namespace": "mybricks.normal-pc.anchor-container",
+  "version": "1.0.4",
+  "description": "锚点容器",
+  "author": "Mybricks",
+  "author_name": "Mybricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.tsx",
+  "upgrade": "./upgrade.ts",
+  "slots": [
+    {
+      "id": "item",
+      "capacity": 1,
+      "title": "列表项",
+      "type": "scope",
+      "inputs": [
+        {
+          "id": "itemData",
+          "title": "当前项",
+          "desc": "当前项展示内容",
+          "schema": {
+            "type": "any"
+          }
+        },
+        {
+          "id": "index",
+          "title": "当前项序号",
+          "desc": "当前项展示的序号",
+          "schema": {
+            "type": "number"
+          }
+        }
+      ]
+    },
+    {
+      "id": "XsbYMT",
+      "title": "锚点1目标"
+    }
+  ]
+}

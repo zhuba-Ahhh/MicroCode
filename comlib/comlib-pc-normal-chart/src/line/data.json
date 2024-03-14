@@ -1,0 +1,24 @@
+{
+  "height": 400,
+  "config": {
+    "xField": "year",
+    "yField": "value",
+    "xAxis": {},
+    "yAxis": {},
+    "legend": {
+      "position": "top-left"
+    },
+    "seriesField": "",
+    "padding": "auto",
+    "label": false,
+    "smooth": false
+  },
+  "subType": "default",
+  "useEmpty": true,
+  "emptyText": "暂无数据",
+  "showPlotClick": false,
+  "showTooltipChange": false,
+  "customAreaStyle": false,
+  "customPointStyle": false,
+  "customLineStyle": false
+}

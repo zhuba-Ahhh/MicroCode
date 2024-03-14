@@ -1,0 +1,21 @@
+{
+  "asMapArea": false,
+  "text": "按钮",
+  "dataType": "number",
+  "outVal": 0,
+  "inVal": "",
+  "useIcon": false,
+  "isCustom": false,
+  "icon": "HomeOutlined",
+  "size": "small",
+  "type": "primary",
+  "shape": "default",
+  "src": "",
+  "showText": true,
+  "iconLocation": "front",
+  "iconDistance": 8,
+  "contentSize": [
+    14,
+    14
+  ]
+}

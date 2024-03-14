@@ -1,0 +1,17 @@
+{
+  "options": [],
+  "visible": true,
+  "isMultiple": false,
+  "maxTagCountType": "isResponsive",
+  "rules": [],
+  "config": {
+    "allowClear": true,
+    "placeholder": "请选择",
+    "disabled": false,
+    "maxTagCount": "responsive",
+    "changeOnSelect": false,
+    "showSearch": false,
+    "size": "small"
+  },
+  "isEditable": true
+}

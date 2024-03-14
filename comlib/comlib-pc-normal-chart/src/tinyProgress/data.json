@@ -1,0 +1,11 @@
+{
+  "config": {
+    "percent": 0.4,
+    "barWidthRatio": 1,
+    "color": [
+      "#58f",
+      "#ddd"
+    ],
+    "padding": "auto"
+  }
+}

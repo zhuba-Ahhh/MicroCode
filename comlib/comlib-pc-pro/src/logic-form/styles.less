@@ -1,0 +1,86 @@
+.empty {
+  padding: 12px 0;
+
+  .emptyAddIcon {
+    margin: 0 8px;
+  }
+}
+
+.addIcon {
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  font-style: normal;
+  margin: 5px 0;
+  font-size: 18px;
+  vertical-align: baseline;
+}
+
+.conditionGroup {
+  position: relative;
+
+  .dividerLine {
+    position: absolute;
+    top: 0;
+    bottom: 24px;
+    left: 12px;
+    width: 2px;
+    background: #1890ff;
+
+    .whereJoiner {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(-9px);
+      height: 20px;
+      width: 20px;
+      background: #fff;
+      border: 1px solid #1890ff;
+      color: #1890ff;
+      font-size: 14px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.condition {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .fieldFormItem {
+    width: 200px;
+    margin-right: 16px;
+  }
+
+  .operatorFormItem {
+    width: 150px;
+    margin-right: 16px;
+  }
+
+  .valueFormItem {
+    flex: 1;
+    margin-right: 16px;
+  }
+
+  .operatorBox {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .icon {
+      cursor: pointer;
+      margin: 0 8px;
+    }
+
+    .hidden {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+}

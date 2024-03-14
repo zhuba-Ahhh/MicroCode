@@ -1,0 +1,34 @@
+{
+  "title": "iFrame",
+  "namespace": "mybricks.normal-pc.iframe",
+  "version": "1.0.2",
+  "description": "iframe容器",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.png",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.ts",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "setUrl",
+      "title": "输入链接",
+      "schema": {
+        "type": "string"
+      },
+      "rels": [
+        "setUrlDone"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "setUrlDone",
+      "title": "输入链接完成",
+      "schema": {
+        "type": "string"
+      }
+    }
+  ]
+}

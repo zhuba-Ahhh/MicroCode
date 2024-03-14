@@ -1,0 +1,36 @@
+.wrapper {
+  padding: 4px 0;
+}
+
+.container {
+  // display: flex;
+  // flex-direction: row;
+  // flex-flow: row wrap;
+  max-width: 100%;
+}
+.suggestion {
+  font-style: italic;
+  padding: 5px;
+  color: #aaa;
+}
+// [data-item-type="text"],
+// [data-item-type="link"] {
+// }
+
+.text {
+  white-space: pre-wrap;
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #000000;
+  width: fit-content;
+}
+
+.isUnitytext {
+  :global {
+    .ant-typography {
+      color: unset;
+    }
+  }
+}

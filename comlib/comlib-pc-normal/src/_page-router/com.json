@@ -1,0 +1,32 @@
+{
+  "title": "跳转到...",
+  "namespace": "mybricks.normal-pc.page-router",
+  "version": "1.0.5",
+  "rtType": "js",
+  "description": "路由切换",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.ts",
+  "editors": "./editors.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "routerAction",
+      "title": "路由切换",
+      "schema": {
+        "type": "any"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "routerActionDone",
+      "title": "路由切换完成",
+      "schema": {
+        "type": "any"
+      }
+    }
+  ]
+}

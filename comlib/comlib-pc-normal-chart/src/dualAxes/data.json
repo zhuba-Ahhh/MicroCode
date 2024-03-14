@@ -1,0 +1,29 @@
+{
+  "height": 400,
+  "config": {
+    "xField": "year",
+    "yField": [
+      "value",
+      "count"
+    ],
+    "xAxis": {},
+    "yAxis": {},
+    "legend": {
+      "position": "top-left"
+    },
+    "geometryOptions": [
+      {
+        "geometry": "line",
+        "color": "#5AD8A6"
+      },
+      {
+        "geometry": "line",
+        "color": "#5B8FF9"
+      }
+    ],
+    "padding": "auto",
+    "smooth": false
+  },
+  "useEmpty": true,
+  "emptyText": "暂无数据"
+}

@@ -1,0 +1,80 @@
+{
+  "title": "JSON表单",
+  "namespace": "mybricks.pro-pc.json-form",
+  "version": "1.0.2",
+  "description": "JSON表单",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editors.ts",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "setColumns",
+      "title": "输入Schema描述",
+      "schema": {
+        "type": "object"
+      },
+      "desc": "输入符合定义的Schema描述"
+    },
+    {
+      "id": "setFieldsValue",
+      "title": "设置表单数据",
+      "schema": {
+        "type": "object",
+        "properties": {}
+      },
+      "desc": "给表单设置数据"
+    },
+    {
+      "id": "submit",
+      "title": "提交表单",
+      "rels": [
+        "onFinishForRels"
+      ],
+      "schema": {
+        "type": "any"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "onFinish",
+      "title": "提交数据输出",
+      "schema": {
+        "type": "object"
+      }
+    },
+    {
+      "id": "onFinishForRels",
+      "title": "提交数据输出",
+      "schema": {
+        "type": "object"
+      }
+    },
+    {
+      "id": "onReset",
+      "title": "重置表单输出",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "onValuesChange",
+      "title": "数据变化",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "changedValues": {
+            "type": "object"
+          },
+          "allValues": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "测试--容器",
+  "namespace": "test.container",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "version": "1.0.0",
+  "description": "表单容器",
+  "runtime": "./runtime.tsx",
+  "slots": [
+    {
+      "id": "content",
+      "type": "scope",
+      "_inputs": [
+        {
+          "id": "onChange",
+          "title": "表单项值变化",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "title": "组件ID"
+              },
+              "value": {
+                "type": "any",
+                "title": "组件值"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

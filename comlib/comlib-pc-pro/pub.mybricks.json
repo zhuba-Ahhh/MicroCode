@@ -1,0 +1,32 @@
+{
+  "debugger": "pc-spa",
+  "componentType": "PC",
+  "fileId": 7765,
+  "folderId": 4695,
+  "commitInfo": "update",
+  "namespace": "mybricks.pro-pc",
+  "comAry": [
+    "./src/editable-pro-table/com.json",
+    "./src/json-form/com.json",
+    "./src/logic-form/com.json"
+  ],
+  "externals": [
+    {
+      "name": "@ant-design/icons",
+      "library": "icons",
+      "urls": [
+        "https://assets.mybricks.world/pkg/@ant-design/icons-4.7.0/index.umd.min.js"
+      ]
+    },
+    {
+      "name": "antd",
+      "library": "antd",
+      "urls": [
+        "https://assets.mybricks.world/pkg/antd-4.21.6/antd.min.css",
+        "https://assets.mybricks.world/pkg/moment-2.9.1/moment.min.js",
+        "https://assets.mybricks.world/pkg/antd-4.21.6/antd.min.js"
+      ]
+    }
+  ],
+  "tags": "react"
+}

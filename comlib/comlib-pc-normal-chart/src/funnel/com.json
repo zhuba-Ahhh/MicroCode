@@ -1,0 +1,36 @@
+{
+  "title": "漏斗图",
+  "namespace": "mybricks.normal-pc-chart.funnel",
+  "version": "1.0.4",
+  "description": "漏斗图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "xField": {
+              "title": "x轴字段名",
+              "type": "string"
+            },
+            "yField": {
+              "title": "y轴字段名",
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": []
+}

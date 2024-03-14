@@ -1,0 +1,36 @@
+{
+  "title": "应用事件",
+  "namespace": "mybricks.normal-pc.events",
+  "version": "1.0.1",
+  "rtType": "js",
+  "description": "路由参数",
+  "author": "GodStream",
+  "author_name": "GodStream",
+  "docs": "",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.ts",
+  "editors": "./editor.ts",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "run",
+      "title": "触发事件",
+      "schema": {
+        "type": "any"
+      },
+      "desc": "触发应用事件",
+      "rels": ["runDone"]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "runDone",
+      "title": "触发事件完成",
+      "schema": {
+        "type": "any"
+      },
+      "desc": "触发应用事件完成"
+    }
+  ]
+}

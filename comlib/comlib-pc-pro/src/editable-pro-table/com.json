@@ -1,0 +1,84 @@
+{
+  "title": "可编辑表格",
+  "namespace": "mybricks.pro-pc.editable-pro-table",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "version": "1.0.26",
+  "description": "",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "upgrade": "./upgrade.ts",
+  "runtime": "./EditableProTable.tsx",
+  "editors": "./editors.tsx",
+  "inputs": [
+    {
+      "id": "value",
+      "title": "输入数据",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "desc": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "colsCfg",
+      "title": "修改列配置",
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "submit",
+      "title": "提交数据",
+      "rels": [
+        "submit"
+      ],
+      "schema": {
+        "type": "any"
+      }
+    },
+    {
+      "id": "addRow",
+      "title": "新增一行",
+      "schema": {
+        "type": "any"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "submit",
+      "title": "输出数据",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "desc": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "slots": []
+}

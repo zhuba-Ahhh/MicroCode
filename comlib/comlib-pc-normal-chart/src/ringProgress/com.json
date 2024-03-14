@@ -1,0 +1,89 @@
+{
+  "title": "迷你环图",
+  "namespace": "mybricks.normal-pc-chart.ringProgress",
+  "version": "1.0.1",
+  "description": "迷你进度环图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "percent",
+      "title": "百分比数据",
+      "schema": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    {
+      "id": "style",
+      "title": "设置图形样式",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "title": "颜色数组",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 2
+          },
+          "radius": {
+            "type": "number",
+            "title": "外环半径(相对于画布宽高)",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "innerRadius": {
+            "type": "number",
+            "title": "内环半径(相对于外环半径)",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "statistic",
+      "title": "设置文案",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "标题",
+            "type": "object",
+            "properties": {
+              "content": {
+                "type": "string"
+              }
+            }
+          },
+          "content": {
+            "title": "内容",
+            "type": "object",
+            "properties": {
+              "content": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tooltip",
+      "title": "设置提示信息",
+      "schema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "outputs": []
+}

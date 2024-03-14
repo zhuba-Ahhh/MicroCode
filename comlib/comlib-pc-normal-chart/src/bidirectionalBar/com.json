@@ -1,0 +1,41 @@
+{
+  "title": "对称条形图",
+  "namespace": "mybricks.normal-pc-chart.BidirectionalBar",
+  "version": "1.0.3",
+  "description": "对称条形图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "title": "输入数据",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "xField": {
+              "title": "x轴字段名",
+              "type": "string"
+            },
+            "yField0": {
+              "title": "y轴字段名(左)",
+              "type": "number"
+            },
+            "yField1": {
+              "title": "y轴字段名(右)",
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": []
+}

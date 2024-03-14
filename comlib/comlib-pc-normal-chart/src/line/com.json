@@ -1,0 +1,44 @@
+{
+  "title": "折线图",
+  "namespace": "mybricks.normal-pc-chart.line",
+  "version": "1.0.7",
+  "description": "折线图",
+  "author": "MyBricks",
+  "author_name": "MyBricks",
+  "icon": "./icon.svg",
+  "data": "./data.json",
+  "runtime": "./runtime.tsx",
+  "editors": "./editor.tsx",
+  "upgrade": "./upgrade.ts",
+  "inputs": [
+    {
+      "id": "data",
+      "title": "输入数据",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "xField": {
+              "title": "x轴字段名",
+              "type": "string"
+            },
+            "yField": {
+              "title": "y轴字段名",
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "tooltipChange",
+      "title": "查看节点变化事件",
+      "schema": {
+        "type": "any"
+      }
+    }
+  ]
+}

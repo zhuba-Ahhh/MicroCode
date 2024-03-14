@@ -1,0 +1,21 @@
+.wrap {
+  display: flex;
+  .input {
+    height: 26px;
+  }
+  .btn {
+    height: 26px;
+    box-sizing: border-box;
+  }
+  .treeSelect {
+    width: 100%;
+    :global {
+      .ant-select-selector {
+        height: 26px !important;
+      }
+      .ant-select-selection-item {
+        line-height: 25px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "content": "文字",
+  "outputContent": "",
+  "align": "left",
+  "isEllipsis": false,
+  "ellipsis": {
+    "rows": 3
+  },
+  "style": {},
+  "useClick": false,
+  "useDynamicStyle": false,
+  "useHoverStyle": true,
+  "legacyConfigStyle": {}
+}

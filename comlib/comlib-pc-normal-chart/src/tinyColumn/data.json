@@ -1,0 +1,15 @@
+{
+  "height": 400,
+  "config": {
+    "xAxis": {},
+    "yAxis": {},
+    "legend": {
+      "position": "top-left"
+    },
+    "pattern": {},
+    "color": "#5588FF",
+    "padding": "auto"
+  },
+  "useEmpty": true,
+  "emptyText": "暂无数据"
+}

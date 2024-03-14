@@ -1,0 +1,29 @@
+{
+  "rules": [],
+  "config": {
+    "fileKey": "file",
+    "buttonText": "点击上传",
+    "name": "file",
+    "listType": "text",
+    "fileType": [],
+    "fileSize": 0,
+    "fileCount": 0,
+    "uploadStyle": {}
+  },
+  "isShowUploadList": true,
+  "isCustom": false,
+  "imageSize": [
+    0,
+    0
+  ],
+  "buttonSize": "small",
+  "customUpload": true,
+  "fileClick": false,
+  "hideIcon": false,
+  "isEditable": true,
+  "isCustomIcon": false,
+  "textIcon": "UploadOutlined",
+  "picIcon": "UploadOutlined",
+  "picCardIcon": "PlusOutlined",
+  "dragIcon": "InboxOutlined"
+}
