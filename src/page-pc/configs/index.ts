@@ -1,4 +1,5 @@
 //加载连接器插件
+import aiPlugin from '@mybricks/plugin-ai-copilot';
 import servicePlugin from '@mybricks/plugin-connector-http';
 import toolsPlugin from '@mybricks/plugin-tools';
 
@@ -14,12 +15,13 @@ export default (
   userDataJSON: useDataJSON,
   changeUserDataJSON: (value: any) => void
 ) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return (
     designerRef && {
       shortcuts: {
         'ctrl+s': [save]
       },
-      plugins: [servicePlugin(), toolsPlugin()], //配置插件
+      plugins: [servicePlugin(), toolsPlugin(), aiPlugin()], //配置插件
       ...Loaders(projectJson),
       ...Views(userDataJSON, changeUserDataJSON),
 

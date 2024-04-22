@@ -15,6 +15,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@mybricks/plugin-ai-copilot": "^0.0.9",
     "@mybricks/plugin-connector-http": "^1.1.50",
     "@mybricks/plugin-tools": "^1.0.17",
     "antd": "^4.23.6",
