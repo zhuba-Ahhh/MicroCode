@@ -2,13 +2,43 @@
 <html lang="zh-CN" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <title>MicroCode</title>
+    <title>普通PC页面 - MicroCode</title>
     <link rel="shortcut icon" href="./assets/icon.svg" />
-    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    <!-- antd样式 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.css"
+    />
+
+    <!-- 应用自己的样式 -->
+    <link href="./css/global.css" rel="stylesheet" type="text/css" />
+    <link href="./css/theme.css" rel="stylesheet" type="text/css" />
+
+    <!-- react 18 （正式线上改为production版本） -->
     <script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/reat-18.0.0/react.development.js"></script>
     <script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/react-dom-18.0.0/react-dom.development.js"></script>
-    <script src="./main.js" defer></script>
+
+    <!-- 加载antd 组件库（搭建应用依赖） -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/antd/4.21.6/antd.min.js"></script>
+
+    <!-- 加载antd 图标库（搭建应用依赖） -->
+    <script src="https://ali-ec.static.yximgs.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/icons-4.7.0/dist/index.umd.min.js"></script>
+    <script src="https://f2.eckwai.com/kos/nlav12333/mybricks/axios0.18.1.min.js"></script>
+    <script src="https://f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/ant-design/charts-1.2.14/charts.min.js"></script>
+    <script src="https://ali2.a.kwimgs.com/udata/pkg/eshop/chrome-plugin-upload/2023-03-16/1678937644329.6b97634ad57590e0.js"></script>
+
+    <!-- Mybricks-SPA设计引擎 -->
+    <script
+      type="text/javascript"
+      src="https://f2.beckwai.com/kos/nlav12333/mybricks/designer-spa/1.4.3.3/index.min.js"
+    ></script>
+    <script src="//f2.eckwai.com/kos/nlav12333/mybricks/moment2.29.4.min.js"></script>
+    <script src="//f2.eckwai.com/udata/pkg/eshop/fangzhou/pub/pkg/moment-2.29.4/zh-cn.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/7.22.17/babel.js"></script>
+    <script src="./page-pc.js" defer></script>
   </head>
+
   <body>
     <div id="root"></div>
   </body>
